@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Auszeichnung akademischer Literatur in DocBook</title>
+		<meta name="description" content="Auszeichnung akademischer Literatur in DocBook"/>
+		<meta name="author" content="Kai Weber, pagina GmbH Publikationstechnologien"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+		<link rel="stylesheet" href="reveal-lib/css/reveal.css"/>
+		<link rel="stylesheet" href="reveal-lib/css/theme/pagina.css" id="theme"/>
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="reveal-lib/lib/css/github.css"/>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal-lib/css/print/pdf.css' : 'reveal-lib/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="reveal-lib/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body style="hyphens:manual">
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="font-size:1.8em">Auszeichnung akademischer Literatur in DocBook</h1>
+					<br/>
+					<p class="small">22.04.2020 / XML User Group Stuttgart: XUGS #24</p>
+					<p class="small"><a href="mailto:kai.weber@pagina.gmbh">Kai Weber</a> / <img src="images/twitter.png" class="plain" width="25" style="vertical-align:text-top; margin:0;" /> <a href="https://twitter.com/fruehlingstag">@fruehlingstag</a></p>
+				</section>
+				<section>
+					<h2>Kai Weber</h2>
+					<img src="images/2018-09-06 pagina-Porträts 07_800px.jpg" style="float:right" class="noborder" width="200"/><!--style="float:right;"-->
+					<ul class="txt-medium">
+						<li><strong>Ausbildung:</strong> Buchhändler, Buchhandlung Reuffel, Koblenz</li>
+						<li><strong>Studium:</strong>
+							<ul>
+								<li>[Magister Artium:] Allg. u. Vergl. Literaturwissenschaft, Buchwissen&#xAD;schaft, Bohemistik und Deutsch als Fremdsprache, Johannes-Gutenberg-Universität, Mainz</li>
+								<li>[Master of Computer Science:] Fernstudium Informatik, Hochschule Trier</li>
+							</ul>
+						</li>
+						<li><strong>Beruf:</strong>
+							<ul>
+								<li>e-Publishing / e-Business, Ernst Reinhardt Verlag, München</li>
+								<li>Projektmanager E-Book, Koch, Neff &amp; Volckmar GmbH, Stuttgart</li>
+								<li>Softwareentwickler Digitale Verlagsauslieferung, Koch, Neff &amp; Oetinger Verlagsauslieferung GmbH, Stuttgart</li>
+								<li>Softwareentwickler Digital Humanities, pagina GmbH Publikationstechnoligien, Tübingen</li>
+							</ul>
+						</li>
+					</ul>
+				</section>				
+				<section>
+					<h2>Ausgangslage</h2>
+					<ul>
+						<li>Universität stellte je ein MS-Word- und ein LaTeX-Template für die Formatierung der Abschlussarbeit bereit</li>
+						<li>MS-Word kam für den Examinanden nicht in Frage, weil er unter Linux arbeitete</li>
+						<li>LaTeX-Template kam für den Examinanden nicht in Frage, weil er mit dem Ökosystem aus Tools und Modulen nicht vertraut war</li>
+						<li>Examinand fühlte sich in XML wohl</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Der Hilferuf</h2>
+					<a href="https://twitter.com/gimsieke/status/953751156857163780">
+						<img src="images/2020-04-22_XUGS24_kw/gimsieke-recommends-docbook.png"/>
+					</a>
+				</section>
+				
+<!-- 1. Vorstellung einiger Aspekte, die out-of-the-box funktionieren und für akademische Werke wichtig sind -->
+				
+				<section>
+					<section>
+						<h2>Erste Orientierung</h2>
+						<p>Typische Elemente einer Buchstruktur sind schnell ermittelt und intuitiv verwendbar:</p>
+						<ul>
+							<li>&lt;book&gt; als Wurzelelement</li>
+							<li>Metadaten / bibliogr. Daten in &lt;info&gt;</li>
+							<li>allgemeine Kapitel heißen &lt;chapter&gt;</li>
+							<li>es gibt Elemente für spezielle Kapitel, deren Benennung selbsterklärend ist, z. B. &lt;preface&gt;, &lt;appendix&gt;, &lt;bibliography&gt;, &lt;index&gt;, &lt;glossary&gt;</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Buchstruktur in &lt;oXygen/&gt;-Gliederungsansicht</h2>
+						<div class="overl fragment fade-up" data-fragment-index="0" style="text-align:center">
+							<img src="images/2020-04-22_XUGS24_kw/Kapitelstruktur.png"/>
+						</div>
+					</section>
+					<section>
+						<h2>Binnenstruktur von Kapiteln</h2>
+						<ul>
+							<li>wird mit ebenfalls intuitiv handhabbaren Elementen wie &lt;sect1&gt;, &lt;sect2&gt;, ..., &lt;para&gt; ausgezeichnet</li>
+							<li>Einbindung von Abbildungen mit &lt;figure&gt;</li>
+							<li>Aufbau von Tabellen mit &lt;table&gt;</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Systematische Datenpflege für Anhänge und Verlinkungen</h2>
+						<ul>
+							<li>Viele akademische Arbeiten und Fachbücher verfügen über Anhänge mit bibliografischen Angaben, Glossaren und Registern</li>
+							<li>Einige Verzeichnisse werden aus dem Haupttext generiert (z. B. Inhalts- und Abbildungsverzeichnis, Register)</li>
+							<li>Andere Daten werden als Verzeichnisse gepflegt, auf die dann aus dem Haupttext verwiesen wird: Bibliografie, Glossar</li>
+							<li>Das DocBook-Ökosystem unterstützt Verwaltung solcher Verzeichnisse inklusive einer Verlinkung</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Bibliografien in DocBook</h2>
+						<ul>
+							<li>Werden aus bibliografischen Einträgen (&lt;biblioentry&gt; bzw. &lt;bibliomixed&gt;) aufgebaut</li>
+							<li>&lt;biblioentry&gt;: strukturierte Erfassung als Datensatz; Renderingregeln (XSLT) bringen später den Datensatz in eine Darstellungsform</li>
+							<li>&lt;bibliomixed&gt;: halbstrukturierte Erfassung als Text, der schon eine Darstellung in der gerenderten Publikation vorgibt</li>
+							<li>Verschiedene Publikationsarten (selbständig, Zeitschriftenartikel, Kapitel in Sammelband, ...) werden über @role-Attribute unterschieden</li>
+						</ul>
+					</section>
+					<section>
+						<hgroup>							
+							<h2>Beispiel Bibliografie (1)</h2>
+							<h4>bibliografischer Eintrag in strukturierter Form</h4>
+						</hgroup>
+						<div class="txt-medium">
+							<pre><code class="hljs xml">&lt;biblioentry role="monograph" xml:id="bib_ABC14">
+    &lt;abbrev>ABC14&lt;/abbrev>
+    &lt;editor>&lt;personname>&lt;firstname>Thomas&lt;/firstname>&lt;surname>Bez&lt;/surname>&lt;/personname>&lt;/editor>
+    &lt;title xml:lang="de">ABC des Zwischenbuchhandels&lt;/title>
+    &lt;edition>7. Auflage&lt;/edition>
+    &lt;publisher>
+        &lt;publishername>Börsenverein des Deutschen Buchhandels&lt;/publishername>
+        &lt;address>&lt;city>Frankfurt am Main&lt;/city>&lt;/address>
+    &lt;/publisher>
+    &lt;pubdate>2014&lt;/pubdate>
+    &lt;pagenums>50 S.&lt;/pagenums>
+&lt;/biblioentry></code></pre>
+						<h6>Ausgabe in PDF:</h6>
+						<img  class="size-50" src="images/2020-04-22_XUGS24_kw/biblioentry_rendered.png"/>
+						</div>
+					</section>
+					<section>
+						<hgroup>							
+							<h2>Beispiel Bibliografie (2)</h2>
+							<h4>bibliografischer Eintrag in semi-strukturierter Form</h4>
+						</hgroup>
+						<div class="txt-medium">
+							<pre><code class="hljs xml">
+&lt;bibliomixed role="monograph" xml:id="bib_ABC14mixed">
+    &lt;abbrev>ABC14&lt;/abbrev> &lt;editor>&lt;personname>BEZ, Thomas&lt;/personname>&lt;/editor> (Hg.):
+	&lt;title>ABC des Zwischenbuchhandels&lt;/title>, 7. Auflage. Frankfurt am Main: Börsenverein
+	des Deutschen Buchhandels, &lt;pubdate>2014&lt;/pubdate>. &lt;pagenums>50 S.&lt;/pagenums>
+&lt;/bibliomixed>
+							</code></pre>
+							<h6>Ausgabe in PDF:</h6>
+							<img  class="size-50" src="images/2020-04-22_XUGS24_kw/bibliomixed_rendered.png"/>
+						</div>
+					</section>
+					<section>
+						<h2>Verlinkung auf Bibliografie aus dem Haupttext</h2>
+						<p>Auf einen bibliografischen Eintrag verweist man aus dem Haupttext mit &lt;biblioref&gt;, z. B.:</p>
+						<pre><code class="hljs xml">&lt;para&gt;Die endgültige Fassung wurde 2007 zum Branchenstandard erhoben und seither von allen
+Branchenteilnehmern verwendet (&lt;biblioref linkend="bib_ABC14"/&gt;, S. 48/49).&lt;/para&gt;</code></pre>
+						<p>Beim Rendern nach PDF wird anstelle des Verweises die Abkürzung des Eintrags aus dem &lt;abbrev&gt;-Element eingesetzt (und
+							falls keine Abk. vorhanden, dann stattdessen die @xml:id):</p>
+						<img src="images/2020-04-22_XUGS24_kw/biblioref-rendered.png"/>
+						<aside class="notes">
+							Man kann auch mit &lt;citation> auf einen bibliografischen Eintrag verweisen, dann wird der Linktext nicht automatisch erzeugt.<br/>
+							Dieses entspricht einem generellen Gestaltungsprinzip in DocBook, wo es für allgemeine Links auch das Paar &lt;link&gt; und 
+							&lt;xref&gt; gibt, bei dem letzteres den Linktext aus dem verlinkten Zielelement generiert, das link-Element hingegen den 
+							Linktext bereits selbst enthält.
+						</aside>
+					</section>
+					<section>
+						<h2>Glossare in DocBook</h2>
+						<ul>
+							<li>Werden aus dem Blockelement &lt;glossentry&gt; aufgebaut und bei Bedarf durch &lt;glossdiv&gt; zu größeren Einheiten gruppiert.</li>
+							<li>Binnenaufteilung eines Glossareintrags in Term und Definition ist intuitiv verständlich (s. Bsp.)</li>
+						</ul>
+						<pre><code class="hljs xml">&lt;glossentry xml:id="gt_imprint"&gt;
+  &lt;glossterm&gt;Imprint&lt;/glossterm&gt;
+  &lt;glossdef&gt;
+    &lt;para&gt;Eine Verlagsmarke, die entweder keine rechtlich selbständige Firma ist oder als Firma zu einer Verlagsgruppe (Konzern) gehört, die aber
+       im Markt als Verlag auftritt, z.&#160;B. Penguin Deutschland als Teil der Verlagsgruppe Random House.&lt;/para&gt;
+  &lt;/glossdef&gt;
+&lt;/glossentry&gt;</code></pre>
+					</section>
+					<section>
+						<h2>Glossarverweise</h2>
+						<ul>
+							<li><pre><code class="hljs xml">&lt;glossterm linkend="IDREF"&gt;Glossartext&lt;/glossterm&gt;</code></pre></li>
+							<li>Standardstylesheet erzeugt bei Ausgabe von PDF hier einen Link aus dem Text in das Glossar</li>
+							<li>Viele PDF-Reader haben leider keinen Zurückbutton wie Browser, so dass es mitunter schwierig, vom Glossar (oder vom bibliogr. Eintrag) zurück in den Text zu springen</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h2>Register in DocBook</h2>
+						<ul>
+							<li>Register können vom Renderingsystem automatisch erstellt werden, wenn Registerbegriffe im Haupttext entsprechend ausgezeichnet werden</li>
+							<li>Registereinträge können sich auf einzelne, zusammenhängende Textstellen oder auch auf ganze Kapitel oder beziehen</li>
+							<li>Registereinträge können bis zu drei Stufen tief gestaffelt werden</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Registerbegriffe, zwei Varianten</h2>
+						<ul>
+							<li><pre><code class="hljs xml">Gesucht wird die &lt;indexterm>&lt;primary>Wahrscheinlichkeit&lt;/primary>&lt;secondary>a posteriori&lt;/secondary>
+&lt;/indexterm>A-posteriori-Wahrscheinlichkeit, dass [...]</code></pre></li>
+							<li><pre><code class="hljs xml">Die Warengruppensystematik &lt;indexterm class="startofrange" xml:id="idt_002">&lt;primary>Warengruppensystematik&lt;/primary>&lt;/indexterm>
+des Deutschen Buchhandels [...] Mit uneindeutigen Grenzfällen muss somit sowohl bei der automatischen Klassifikation als auch
+bei der manuellen Eingruppierung stets gerechnet werden.&lt;indexterm class="endofrange" startref="idt_002"/></code></pre>
+								<div style="text-align:center">
+									<img src="images/2020-04-22_XUGS24_kw/indexrange.png"/>
+								</div>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Mathematische Formeln in DocBook</h2>
+						<ul>
+							<li>Je nach DocBook-Version oder -Dialekt ist Verwendung von MathML innerhalb von &lt;equation&gt; und &lt;inlineequation&gt; schon via Relax-NG-Schema erlaubt.</li>
+							<li>Bei Bedarf lässt sich leicht eine eigene Schema-Anpassung erstellen, die MathML auch in anderen Elementen erlaubt (vgl. z. B. Anleitung auf <a href="https://www.data2type.de/xml-xslt-xslfo/docbook/anpassen-von-docbook/docbook-5-erweitern/erweitern-von-docbook-mit-math/">www.data2type.de</a></li>
+							<li>oXygen unterstützt sowohl die Anzeige integrierter Formeln im Autormodus als auch das Rendern nach PDF</li>
+						</ul>
+						<figure style="float:left;width:48%"><img src="images/2020-04-22_XUGS24_kw/mathml_in_oxygen_author.png"/><figcaption>Formel in oXygen Author</figcaption></figure>
+						<figure style="float:left;width:48%"><img src="images/2020-04-22_XUGS24_kw/mathml_in_rendered_pdf.png" /><figcaption>Formel in PDF-Ausgabe</figcaption></figure>
+					</section>
+				</section>
+				
+
+<!-- 2. Vorstellung einiger Anpassungen: Wie passt man Schema bzw. XSLs an? Wann/warum kann es sinnvoll sein, das zu tun? -->
+				
+				<section>
+					<section>
+						<h2>Schema-Anpassung (1)</h2>
+						<p>Dem DocBook Technical Committee als Standardisierungsgremium ist es wichtig, dass DocBook durch Anwender*innen an eigene Bedürfnisse angepasst werden kann. 
+							Um dies zu erleichtern, hat man sich bewusst für RELAX NG + Schematron entschieden und beim Modellieren auf leichte Erweiterbarkeit geachtet.</p>
+						<p>Schema-Anpassungen behalten den DocBook-Namensraum bei, spezifizieren aber einen eigenen Versionswert. Das Technical Committee empfiehlt dazu folgendes
+							Benennungsmuster: <em>(subset|extension|variant) (name[-version])+</em>. Beispiel:</p>
+						<pre><code class="hljs xml">&lt;book xmlns="http://docbook.org/ns/docbook"
+xmlns:mml="http://www.w3.org/1998/Math/MathML"
+xmlns:xlink="http://www.w3.org/1999/xlink" xml:lang="de"
+version="5.0-extension Avve-1.0"&gt;</code></pre>
+					</section>
+					<section>
+						<h2>Schema-Anpassung (2)</h2>
+						<p>Ein RELAX-NG-Schema passt man an, indem man zunächst das zu erweiternde (oder einzuschränkende) Schema inkludiert:</p>
+						<pre><code class="hljs">namespace db = "http://docbook.org/ns/docbook"
+# evtl. weitere Namespace-Deklarationen
+
+include "docbook.rnc" {
+   # Neudefinition von DocBook-Mustern, v. a. für Einschränkungen
+}
+
+# neue und erweiterte Muster (zusätzliche Attribute und Elemente)</code></pre>
+					</section>
+					<section>
+						<h2>Schema-Anpassung, Anwendungsbeispiel: Ziel</h2>
+						<ul>
+							<li>In meiner Arbeit wollte ich einige Variablen verwenden für Zahlwerte, die an mehreren Stellen im Text genannt werden, die ich aber in einer
+								separaten Tabelle pflegen wollte, um im Falle einer Aktualisierung der Zahl nicht alle Textstellen suchen zu müssen, an der die Zahl
+							    genannt oder behandelt wird.</li>
+							<li>Pro Variable definierte ich ein leeres XML-Element, das ich als Inline-Element in beliebigen Text einsetzen konnte</li>
+							<li>Das Rendering (in meinem Fall: XSL-FO) sollte dann beim Erzeugen der Ausgabe die Variablen-Elemente durch die in der separaten
+							    Tabelle hinterlegten Werte ersetzen (ggf. auch aus den Werten per Formel abgeleitete Zahlen berechnen)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Schema-Anpassung, Anwendungsbeispiel: RELAX NG</h2>
+						<pre><code class="hljs"># custom avve elements
+db.domain.inlines |= db.lucene.numberOfDocuments
+db.domain.inlines |= db.lucene.numberOfTerms
+db.domain.inlines |= db.lucene.numberOfUniqueTerms
+db.domain.inlines |= db.modifiedInstancesRatio
+db.domain.inlines |= db.numberOfClasses
+db.domain.inlines |= db.numberOfTrainingInstances
+						
+db.lucene.numberOfDocuments = element numberOfLuceneDocuments {
+    empty
+}
+db.lucene.numberOfTerms = element numberOfLuceneTerms {
+    empty
+}
+[...]</code></pre>
+					</section>
+					<section>
+						<h2>Schema-Anpassung, Anwendungsbeispiel: Verwendung</h2>
+						<p>DocBook-XML:</p>
+						<pre><code class="hljs xml">&lt;para>[...] In einem Bestand von &lt;numberOfLuceneDocuments/> Dokumenten mit insgesamt &lt;numberOfLuceneTerms/>
+unterschiedlichen Lemmata betrug die Zahl der Lemmata, welche nur in einem Dokument 
+vorkommen, &lt;numberOfUniqueLuceneTerms/>. [...] &lt;para></code></pre>
+						<p>PDF-Ausgabe:</p>
+						<figure><img src="images/2020-04-22_XUGS24_kw/variables_in_rendered_output.png"/></figure>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>DocBook-XSL anpassen</h2>
+						<ul>
+							<li>oXygen hat bereits optimierte DocBook-Transformationsszenarien eingebaut</li>
+							<li>Diese kann man wiederum als Basis für eigene Erweiterungen nutzen</li>
+							<li>Wie auch bei der Schema-Erweiterung importiert man zunächst das Basis-XSLT, das man erweitern möchte:</li>
+						</ul>
+						<pre><code class="hljs xml">&lt;!-- in oXygen this path is translated to a local framework file via XML catalog --&gt;
+&lt;xsl:import href="http://cdn.docbook.org/release/xsl/current/fo/docbook_custom.xsl"/></code></pre>
+					</section>
+					<section>
+						<h2>Anwendungsbeispiel (1)</h2>
+						<pre><code class="hljs xml">&lt;xsl:param name="lucene.numberOfDocuments" select="6927"/&gt;
+&lt;xsl:param name="lucene.numberOfTerms" select="2971631"/&gt;
+&lt;xsl:param name="lucene.numberOfUniqueTerms" select="1852691"/&gt;
+
+&lt;xsl:template match="db:numberOfLuceneDocuments"&gt;
+  &lt;xsl:value-of select="$lucene.numberOfDocuments"/&gt;&lt;/xsl:template&gt;
+&lt;xsl:template match="db:numberOfLuceneTerms"&gt;
+  &lt;xsl:value-of select="format-number($lucene.numberOfTerms, '###.###', 'european')"/&gt;&lt;/xsl:template&gt;
+&lt;xsl:template match="db:numberOfUniqueLuceneTerms"&gt;
+  &lt;xsl:value-of select="format-number($lucene.numberOfUniqueTerms, '###.###', 'european')"/&gt;&lt;/xsl:template&gt;
+						</code></pre>
+					</section>
+					<section>
+						<h2>Anwendungsbeispiel (2)</h2>
+						<p>Das XSLT kann natürlich auch Werte zum Renderingzeitpunkt berechnen:</p>
+						<pre><code class="hljs xml">&lt;xsl:template match="db:randomClassifierSuccessRate"&gt;
+    &lt;xsl:value-of select="
+      format-number(
+        sum( 
+            for $i in $avve.warengruppenDistribution/warengruppen/warengruppe 
+            return (($i/@traininstances + $i/@testinstances) div ($avve.numberOfTrainingInstances + $avve.numberOfTestInstances))
+                * (($i/@traininstances + $i/@testinstances) div ($avve.numberOfTrainingInstances + $avve.numberOfTestInstances))
+        ),
+      '#0,0000%',
+      'european')" /&gt;
+&lt;/xsl:template&gt;</code></pre>
+					</section>
+					<section>
+						<h2>Anwendungsbeispiel (3)</h2>
+						<p>Duch ein entsprechendes Template habe ich ganze Tabellen auf Basis von Variablen im XSLT dynamisch berechnet:</p>
+							<pre><code class="hljs xml">&lt;xsl:template match="db:warengruppenDistribution"&gt;
+    &lt;xsl:variable name="temp.warengruppenTable"&gt;
+        &lt;db:table xml:id="temp.warengruppenTable" pgwide="0"&gt;
+            [Definition DocBook-Tabelle gekürzt]
+            &lt;xsl:for-each select="$avve.warengruppenDistribution/warengruppen/warengruppe"&gt;
+                &lt;xsl:sort select="@traininstances + @testinstances" order="descending" /&gt;
+                &lt;db:row&gt;
+                    [...]
+                    &lt;db:entry&gt;&lt;xsl:value-of select="format-number((@traininstances + @testinstances) div 
+                        ($avve.numberOfTrainingInstances + $avve.numberOfTestInstances), '0,00%', 'european')"/&gt;&lt;/db:entry&gt;
+                &lt;/db:row&gt;
+            &lt;/xsl:for-each&gt;
+    &lt;/xsl:variable&gt;
+    &lt;xsl:apply-templates select="$temp.warengruppenTable" mode="warengruppe"/&gt;
+&lt;/xsl:template&gt;</code></pre>
+					</section>
+					<section>
+						<h2>Anwendungsbeispiel (4): Dynamisch ausgegebene Tabelle</h2>
+						<img src="images/2020-04-22_XUGS24_kw/generated_table.png"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<figure style="margin-top:1em;float:right;"><img src="images/2020-04-22_XUGS24_kw/oxygen_transformation-scenario.png"/></figure>
+						<h2>Oxygen-Transformationsszenario anlegen</h2>
+						<ul>
+							<li>Für die Anpassungen am DocBook-XSL empfiehlt es sich, ein oXygen-Transformationsszenario anzulegen</li>
+							<li>Dazu dupliziert man zunächst das eingebaute Szenario „DocBook PDF“ und trägt sein eigenes XSLT-Skript ein</li>
+						</ul>
+					</section>
+					<section>
+						<figure style="margin-top:1em;float:right;"><img src="images/2020-04-22_XUGS24_kw/setting_params_in_transformation_scenario.png"/></figure>
+						<h2>DocBook-XSL-Parameter definieren (1)</h2>
+						<ul>
+							<li>Die DocBook-XSL-Skripte bieten auch ohne Programmierung eigener Templates eine Vielzahl von Parametern, durch deren Belegung man das Verhalten der Ausgabe steuern kann.</li>
+							<li>Am einfachsten lassen sich diese Parameter über den „Parameter“-Button im oXygen-Transformationsszenario setzen</li>
+						</ul>
+					</section>
+					<section>
+						<h2>DocBook-XSL-Parameter definieren (2)</h2>
+						<p>Verwendet man ein eigenes/angepasstes XSL-Stylesheet, kann man dort auch Defaultwerte des importierten DocBook-XSL-Skriptes überschreiben, z. B.:</p>
+						<pre><code class="hljs xml">&lt;!-- DocBook parameters --&gt;
+&lt;xsl:param name="paper.type" select="'A4'"/&gt;
+&lt;xsl:param name="page.margin.inner" select="'2.5cm'"/&gt;
+&lt;xsl:param name="page.margin.outer" select="'2.5cm'"/&gt;
+&lt;xsl:param name="page.margin.top" select="'1.25cm'"/&gt; &lt;!-- margin from top edge of page to top of header --&gt;
+&lt;xsl:param name="region.begore.extend" select="'0.75cm'"/&gt; &lt;!-- height of the header --&gt;
+&lt;xsl:param name="body.margin.top" select="'1.5cm'"/&gt; &lt;!-- top of the text body, as calculated from margin.top --&gt;
+&lt;xsl:param name="page.margin.bottom" select="'2cm'"/&gt; &lt;!--margin from bottom edge of page to bottom of footer --&gt;
+&lt;xsl:param name="body.start.indent" select="'0cm'"/&gt; &lt;!-- switch off DocBook's default indenting --&gt;
+&lt;xsl:param name="body.font.family" select="'Times Roman'"/&gt;
+&lt;xsl:param name="body.font.master" select="12"/&gt; &lt;!-- master font size --&gt;
+&lt;xsl:param name="header.column.widths"&gt;1 4 1&lt;/xsl:param&gt; &lt;!-- give more space to the running header title --&gt;</code></pre>
+					</section>
+				</section>
+				<section>
+					<h2>Schluss</h2>
+					<ul>
+						<li>Fragen?</li>
+						<li>Zum Vertiefen und eigenen Nachvollziehen der hier vorgestellten Anpassungen kann man mein oXygen-Projekt mit den gezeigten Anpassungen klonen:<br/>
+							<a href="https://github.com/sermo-de-arboribus/db-thesis">https://github.com/sermo-de-arboribus/db-thesis</a>
+						</li>
+						<li>Im genannten Repo liegen auch die Quellen dieser Präsentationsfolien. Eine PDF der Folien wird in den nächsten Tagen auf <a href="http://www.xugs.de">www.xugs.de</a> bereitgestellt</li>
+						<li>Vielen Dank!</li>
+					</ul>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="reveal-lib/lib/js/head.min.js"></script>
+		<script src="reveal-lib/js/reveal.js"></script>
+		<script src="reveal-lib/plugin/smart-quotes/smart-quotes.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+			
+			width: "100%",
+	        height: "100%",
+	        //margin: 0,
+	        //minScale: 1,
+	        //maxScale: 1,
+	
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'reveal-lib/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal-lib/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal-lib/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'reveal-lib/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

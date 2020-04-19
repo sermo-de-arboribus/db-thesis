@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Daxline';
+    src: url('DaxlineWeb-Light.eot');
+    src: url('DaxlineWeb-Light.eot?#iefix') format('embedded-opentype'),
+         url('DaxlineWeb-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Daxline';
+    src: url('DaxlineWeb-LightItalic.eot');
+    src: url('DaxlineWeb-LightItalic.eot?#iefix') format('embedded-opentype'),
+         url('DaxlineWeb-LightItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Daxline';
+    src: url('DaxlineWeb-Medium.eot');
+    src: url('DaxlineWeb-Medium.eot?#iefix') format('embedded-opentype'),
+         url('DaxlineWeb-Medium.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Daxline';
+    src: url('DaxlineWeb-MediumItalic.eot');
+    src: url('DaxlineWeb-MediumItalic.eot?#iefix') format('embedded-opentype'),
+         url('DaxlineWeb-MediumItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}

@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('vollkorn-regular-webfont.eot');
+    src: url('vollkorn-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('vollkorn-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('vollkorn-italic-webfont.eot');
+    src: url('vollkorn-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('vollkorn-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('vollkorn-semibold-webfont.eot');
+    src: url('vollkorn-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('vollkorn-semibold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('vollkorn-semibolditalic-webfont.eot');
+    src: url('vollkorn-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('vollkorn-semibolditalic-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
