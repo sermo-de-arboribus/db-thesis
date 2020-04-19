@@ -43,6 +43,55 @@
                 research areas at the end of this study.</para>
         </abstract>
     </info>
+    <preface>
+        <title>Vorwort</title>
+        <para>Die ursprüngliche Fassung dieses Buches wurde an der Hochschule Trier im April 2018 als Abschlussarbeit zur Erlangung des akademischen Grades
+            Master of Computer Science (M. C. Sc.) an der Hochschule Trier eingereicht und angenommen. Das Thema ergab sich aus dem Wunsch heraus, meine
+            beruflichen Erfahrungen
+            im E-Book-Markt und meinen geisteswissenschaftlichen Hintergrund in eine Informatik-Arbeit einfließen zu lassen. Spätestens seit das World Wide
+            Web mit seinen Hypertexten einen enorm großen Fundus an elektronisch verfügbaren Texten bereitstellt, wird die automatische Textklassifikation nicht
+            nur theoretisch erforscht und an kleinen Korpora erprobt, sondern wurde schnell auch zu einer praxisrelevanten Technologie. Auf E-Books wurden
+            Maschinenlernverfahren zur Textklassifikation aber bisher eher nur sporadisch und hinter den verschlossenen Türen einzelner Firmen angewandt. Diese
+            Situation verwundert ein wenig, denn schon nach kurzer Überlegung bieten sich einige mögliche Anwendungsfälle geradezu an:</para>
+        <itemizedlist>
+            <listitem>
+                <para>Manuskriptauswahl: Auch wenn es sich bei einem Manuskript noch nicht um ein E-Book handelt, so wird es dennoch in der Regel als
+                    elektronischer Volltext an einen Verlag oder einen sonstigen Veröffentlichungsdienstleister geliefert. Traditionelle Verlagshäuser
+                    erfüllen mit Ihrer Programmpolitik Qualitätssicherungs-, Kuratierungs- und Ordnungsfunktionen und haben ein Interesse daran, 
+                    möglichst schnell, effizient und korrekt zu ermitteln, welche unverlangt eingesandten Manuskripte für den jeweiligen Verlag von
+                    Interesse sein können. Der Auswahlprozess könnte durch automatische Textklassifikation unterstützt werden, indem ein Computerprogramm
+                    die eingehenden Manuskripte in für den Verlag interessante und uninteressante Textklassen einordnet.</para>
+            </listitem>
+            <listitem>
+                <para>Vorschlagssystem für Schlagworte: Die Grundlagen für ein solches Vorschlagssystem werden in der vorliegenden Arbeit untersucht, für eine 
+                    Einführung in diese Aufgabe sei hier auf das erste Kapitel verwiesen.</para>
+            </listitem>
+            <listitem>
+                <para>Empfehlungsmaschine für Kunden: Statt Kundenempfehlungen allein auf Webshopdaten (Warenkorbanalysen und Klickpfaden) aufzubauen, 
+                    könnten auch individuelle oder prototypische Textklassen aufgebaut werden, die z. B. mit Kundenbewertungen korrelieren.</para>
+            </listitem>
+        </itemizedlist>
+        <para>Die hier vorgelegte Fassung dieses Buches wurde leicht überarbeitet und erweitert. Es handelt sich natürlich im Kern weiterhin um eine
+            akademische Arbeit, die vor einem angerissenen theoretischen Hintergrund empirische Forschungsergebnisse vorlegt. Ich habe jedoch in der
+            Überarbeitung versucht, auch interessierte Nicht-Informatikerinnen und -Informatiker mit ins Boot der potentiellen Leserschaft zu holen. Auch 
+            wer etwa die Passagen mit formalen Definitionen und mathematischen Formeln überspringt, sollte zumindest mit den statistischen Ergebnissen 
+            noch etwas anfangen können.</para>
+    </preface>
+    <preface>
+        <title>Danksagung</title>
+        <para></para>
+    </preface>
+    <preface><!-- Darstellungskonventionen -->
+        <title>Darstellungskonventionen</title>
+        <para>Diese Arbeit wurde in DocBook 5.0, einem OASIS-Standard<footnote><para><link xlink:href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=docbook"/>
+            (Zugriff am 24.2.2018).</para></footnote>, ausgezeichnet und mit einer modifizierten XSL-FO-Transformation aus dem DocBook-XSL-Werkzeugkasten
+            nach PDF gerendert. Glossarbegriffe sind mindestens bei ihrer ersten Erwähnung kursiv dargestellt. Glossarbegriffe, bibliografische Hinweise, 
+            Verweise auf Tabellen, Abbildungen und Kapitel oder Abschnitte sind in der PDF-Version verlinkt. Es empfiehlt sich beim Lesen der PDF-Datei auf einem 
+            Computer einen PDF-Reader mit „Zurück“-Button zu verwenden, um leicht zwischen verlinkten Elementen und dem Ursprung der Verlinkung hin- und 
+            herspringen zu können. In Verweisen auf Kapitel, Abschnitte, Abbildungen und Tabellen wird die Seitenzahl in eckigen Klammern hinter den Verweis 
+            gesetzt, um auch in der gedruckten Version solchen Verweisen leicht folgen zu können. Programmcode sowie Methoden- und Klassennamen aus 
+            Programmen sind in <code>nichtproportionaler Schrift</code> ausgezeichnet.</para>
+    </preface>
     <chapter xml:id="ch_Intro"><!-- Einleitung -->
         <title>Einleitung und Problemstellung</title>
         <sect1 xml:id="ch_Intro_Intro"> <!-- Einleitung -->
@@ -56,35 +105,38 @@
                     diejenige des Knowledge Engineerings heran und sie ist günstiger
                     und einfacher umzusetzen, weil keine Expertinnen und Domänenspezialisten mehr benötigt werden (<biblioref linkend="bib_Seb02"/>, S. 2).</para>
                 <para>In der vorliegenden Arbeit wird versucht, eine <indexterm><primary>Schlagwort</primary></indexterm>Schlagwort-Klassifikation von
-                    <glossterm linkend="gt_ebook">E-Books</glossterm> durch Verfahren des Maschinenlernens automatisch durchzuführen<footnote>
-                        <para>Eine Anmerkung zur Terminologie: In dieser Arbeit ist mit dem Wort „Klassifikation“ 
-                        das gemeint, was im deutschsprachigen Buchwesen gewöhnlich als „Verschlagwortung“ bezeichnet wird, also die Zuordnung 
-                        von Büchern bzw. Texten zu thematischen Schlagwörtern oder anderen inhaltlichen, teilweise auch formalen Kriterien. Im 
-                        Bezug auf Bücher oder Texte werden „Klassifikation“ und „Verschlagwortung“ hier somit synonym verwendet. Nichtsdestotrotz 
-                        unterscheiden sich die beiden Begriffe in Nuancen, indem sie unterschiedliche Betrachtungsweisen evozieren: 
-                        „Klassifikation“ ist zugleich ein Verfahren des Maschinenlernens (und lässt sich somit auch auf andere Inhalte als 
-                        Buchtexte anwenden), „Verschlagwortung“ steht in einer bibliothekarischen bzw. bibliografischen Tradition. Zur 
-                        Unterscheidung von „Schlagwort“ und „Stichwort“ im Buchwesen vgl. darüber hinaus die entsprechenden Einträge in 
-                        <biblioref linkend="bib_ABC14"/>.</para></footnote>. Informell bedeutet Maschinenlernen, dass aus einer begrenzten Zahl von bereits
-                    klassifizierten Eingabedaten unter Verwendung von Algorithmen bzw. statistischen Berechnungen ein Modell erstellt (d. h. gelernt) wird,
-                    welches es ermöglicht, in Zukunft unklassifizierte Daten desselben Anwendungsbereichs automatisch zu klassifizieren. Damit dies überhaupt möglich ist,
-                    muss davon ausgegangen werden, dass die Lerndaten und die zukünftigen Daten derselben Wahrscheinlichkeitsverteilung unterliegen, welche
-                    jedoch unbekannt ist (vgl. <biblioref linkend="bib_SC08"/>, S. 2-3). Man spricht bei diesem Vorgehen auch von <indexterm><primary>Lernen</primary>
-                        <secondary>beobachtetes</secondary></indexterm>beobachtetem Lernen (engl. <emphasis>supervised learning</emphasis>), bei dem eine gewisse Menge
-                    von bereits vorklassifizierten Trainingsdaten verfügbar ist. Etwas formaler ausgedrückt besteht das hier untersuchte Problem darin, 
-                    aus Tupeln <inlineequation><mml:math><mml:mo>(</mml:mo><mml:mover><mml:mi>d</mml:mi><mml:mo stretchy="true">⃗</mml:mo></mml:mover><mml:mtext>,</mml:mtext>
-                        <mml:mi>c</mml:mi><mml:mo>)</mml:mo><mml:mtext>&#160;mit&#160;</mml:mtext><mml:mover><mml:mi>d</mml:mi><mml:mo stretchy="true">⃗</mml:mo></mml:mover>
-                        <mml:mtext>&#160;</mml:mtext><mml:mo>∈</mml:mo><mml:mtext>&#160;</mml:mtext><mml:mi>D</mml:mi></mml:math></inlineequation> (Menge aller E-Book-Dokumente)
-                    und <inlineequation><mml:math><mml:mi>c</mml:mi><mml:mtext>&#160;</mml:mtext><mml:mo>∈</mml:mo><mml:mtext>&#160;</mml:mtext>
-                                <mml:mi>C</mml:mi></mml:math></inlineequation> (Menge aller möglichen Klassen) eine Funktion <inlineequation><mml:math><mml:mi>f</mml:mi>
-                                    <mml:mo>(</mml:mo><mml:mover><mml:mi>d</mml:mi><mml:mo stretchy="true">⃗</mml:mo></mml:mover><mml:mo>)</mml:mo></mml:math></inlineequation> zu 
-                        lernen, welche zukünftige, zum Trainingszeitpunkt noch unbekannte, E-Books möglichst gut klassifizieren kann: <inlineequation><mml:math>
-                            <mml:mi>f</mml:mi><mml:mo>:</mml:mo><mml:mi>D</mml:mi><mml:mo>↦</mml:mo><mml:mo>C</mml:mo></mml:math></inlineequation>.<footnote>
-                    <para>Eine vollständige formale Formulierung des Lernproblems im Maschinenlernens ist sehr viel umfangreicher, trifft notwendige Vorannahmen und 
-                        zeigt dann, wie empirisch ermittelte Klassifikationsfunktionen über die Berechnung von Maxima bzw. Minima bei Verlust- und Risikofunktionen an
-                        eine unbekannte, nicht direkt beobachtbare inhärente Klassifikationsfunktion angenähert werden können. Für eine rigide Formulierung sei verwiesen auf
-                        das Einführungskapitel in <biblioref linkend="bib_SC08"/>. In der hier vorliegenden Arbeit werden wir „moderate“ mathematische Formulierungen angeben,
-                        wo sie zum Verständnis notwendig oder hilfreich sind, streben aber weder Vollständigkeit noch formale Strenge an.</para></footnote></para>
+                    <glossterm linkend="gt_ebook">E-Books</glossterm> durch Verfahren des Maschinenlernens automatisch durchzuführen<footnote><para>Eine
+                        Anmerkung zur Terminologie: In dieser Arbeit ist mit dem Wort „Klassifikation“ das gemeint, was im deutschsprachigen Buchwesen
+                        gewöhnlich als „Verschlagwortung“ bezeichnet wird, also die Zuordnung von Büchern bzw. Texten zu thematischen Gruppen
+                        oder anderen inhaltlichen, teilweise auch formalen Kriterien. Im Bezug auf Bücher oder Texte werden „Klassifikation“ und
+                        „Verschlagwortung“ hier somit synonym verwendet. Nichtsdestotrotz unterscheiden sich die beiden Begriffe in Nuancen, indem
+                        sie unterschiedliche Betrachtungsweisen evozieren: „Klassifikation“ ist zugleich ein Verfahren des Maschinenlernens (und lässt
+                        sich somit auch auf andere Inhalte als Buchtexte anwenden), „Verschlagwortung“ steht in einer bibliothekarischen bzw.
+                        bibliografischen Tradition und wird dort teilweise noch enger aufgefasst. Zur Unterscheidung von „Schlagwort“ und „Stichwort“ im
+                        Buchwesen vgl. darüber hinaus die entsprechenden Einträge in <biblioref linkend="bib_ABC14"/>.</para></footnote>. Informell
+                    bedeutet Maschinenlernen, dass aus einer begrenzten Zahl von bereits klassifizierten Eingabedaten unter Verwendung von Algorithmen
+                    bzw. statistischen Berechnungen ein Modell erstellt (d. h. gelernt) wird, welches es ermöglicht, in Zukunft unklassifizierte Date
+                    desselben Anwendungsbereichs automatisch zu klassifizieren. Damit dies überhaupt möglich ist, muss davon ausgegangen werden, dass
+                    die Lerndaten und die zukünftigen Daten derselben Wahrscheinlichkeitsverteilung unterliegen, welche jedoch unbekannt ist (vgl.
+                    <biblioref linkend="bib_SC08"/>, S. 2-3). Man spricht bei diesem Vorgehen auch von <indexterm><primary>Lernen</primary>
+                        <secondary>beobachtetes</secondary></indexterm>beobachtetem Lernen (engl. <emphasis>supervised learning</emphasis>), bei dem
+                    eine gewisse Menge von bereits vorklassifizierten Trainingsdaten verfügbar ist. Etwas formaler ausgedrückt besteht das hier
+                    untersuchte Problem darin, aus Tupeln <inlineequation><mml:math><mml:mo>(</mml:mo><mml:mover><mml:mi>d</mml:mi>
+                        <mml:mo stretchy="true">⃗</mml:mo></mml:mover><mml:mtext>,</mml:mtext><mml:mi>c</mml:mi><mml:mo>)</mml:mo>
+                        <mml:mtext>&#160;mit&#160;</mml:mtext><mml:mover><mml:mi>d</mml:mi><mml:mo stretchy="true">⃗</mml:mo></mml:mover>
+                        <mml:mtext>&#160;</mml:mtext><mml:mo>∈</mml:mo><mml:mtext>&#160;</mml:mtext><mml:mi>D</mml:mi></mml:math></inlineequation> (Menge
+                    aller E-Book-Dokumente) und <inlineequation><mml:math><mml:mi>c</mml:mi><mml:mtext>&#160;</mml:mtext><mml:mo>∈</mml:mo>
+                        <mml:mtext>&#160;</mml:mtext><mml:mi>C</mml:mi></mml:math></inlineequation> (Menge aller möglichen Klassen) eine Funktion
+                    <inlineequation><mml:math><mml:mi>f</mml:mi><mml:mo>(</mml:mo><mml:mover><mml:mi>d</mml:mi><mml:mo stretchy="true">⃗</mml:mo>
+                    </mml:mover><mml:mo>)</mml:mo></mml:math></inlineequation> zu lernen, welche zukünftige, zum Trainingszeitpunkt noch unbekannte,
+                    E-Books möglichst gut klassifizieren kann: <inlineequation><mml:math><mml:mi>f</mml:mi><mml:mo>:</mml:mo><mml:mi>D</mml:mi>
+                        <mml:mo>↦</mml:mo><mml:mo>C</mml:mo></mml:math></inlineequation>.<footnote><para>Eine vollständige formale Formulierung
+                            des Lernproblems im Maschinenlernens ist sehr viel umfangreicher, trifft notwendige Vorannahmen und zeigt dann, wie
+                            empirisch ermittelte Klassifikationsfunktionen über die Berechnung von Maxima bzw. Minima bei Verlust- und
+                            Risikofunktionen an eine unbekannte, nicht direkt beobachtbare inhärente Klassifikationsfunktion angenähert werden
+                            können. Für eine rigide Formulierung sei verwiesen auf das Einführungskapitel in <biblioref linkend="bib_SC08"/>.
+                            In der hier vorliegenden Arbeit werden wir „moderate“ mathematische Formulierungen angeben, wo sie zum Verständnis
+                            notwendig oder hilfreich sind, streben aber weder Vollständigkeit noch formale Strenge an.</para></footnote></para>
                 <para>Die konkrete Aufgabe besteht also im hier untersuchten Fall darin, ein Maschinenlernmodell zunächst mit bereits klassifizierten E-Book-Texten zu
                     trainieren und das Modell anschließend qualitativ zu beurteilen. Als Grundlage für die Klassifikation dienen dabei einzig die vorliegenden 
                     E-Book-Dateien und deren Eigenschaften, insbesondere der enthaltene Text. Es handelt sich allgemein gesprochen um ein Problem
@@ -92,11 +144,12 @@
                     Abbildungen werden zusätzlich berücksichtigt werden, lassen sich aber, wie zu zeigen sein wird, problemlos neben den Textinformationen in die 
                     gewählten Maschinenlernverfahren integrieren.</para>
                 <para><xref linkend="abb9"/> zeigt den gewöhnlichen Ablauf eines Wissensgewinnungsprozesses<indexterm><primary>Wissensgewinnung</primary></indexterm> mit
-                    Hilfe des Maschinenlernens. Der Aufbau der vorliegenden Arbeit ist lose an diesem Prozessschaubild orientiert: Für ein Verständnis der Daten 
-                    und des Anwendungsfeldes sorgen zunächst die weiteren Abschnitte dieser Einleitung, in denen die Warengruppensystematik des Deutschen Buchhandels
-                    und die Thema-Klassifikation von EDItEUR vorgestellt werden. Dem Schritt <emphasis>Data Preprocessing</emphasis> ist dann <xref linkend="ch_TextPropIntro"/>
-                    gewidmet. Hier werden sowohl unser Korpus als auch die daraus ermittelten Lernattribute vorgestellt und die technische Verarbeitung der E-Books bis 
-                    hin zur Phase <emphasis>Model Building</emphasis> kurz geschildert. <xref linkend="ch_Evaluation"/> erläutert dann Kriterien der Evaluation in allgemeiner
+                    Hilfe des Maschinenlernens in Anlehnung an CRISP-DM (<biblioref linkend="bib_Cha2000"/>). Der Aufbau der vorliegenden Arbeit ist lose an diesem
+                    Prozessmodell für das Data Mining orientiert: Für ein Verständnis der Daten und des Anwendungsfeldes sorgen zunächst die weiteren Abschnitte
+                    dieser Einleitung, in denen die Warengruppensystematik des Deutschen Buchhandels und die Thema-Klassifikation von EDItEUR vorgestellt werden.
+                    Dem Schritt <emphasis>Data Preprocessing</emphasis> ist dann <xref linkend="ch_TextPropIntro"/> gewidmet. Hier werden sowohl unser Korpus als
+                    auch die daraus ermittelten Lernattribute vorgestellt und die technische Verarbeitung der E-Books bis hin zur Phase <emphasis>Model
+                        Building</emphasis> kurz geschildert. <xref linkend="ch_Evaluation"/> erläutert dann Kriterien der Evaluation in allgemeiner
                     Weise und diskutiert Referenzwerte für die Bewertung unserer eigenen E-Book-Klassifikatoren.</para>
                 <figure xml:id="abb9" pgwide="1"> <!-- Abbildung Knowledge Discovery im Maschinenlernen -->
                     <title>Knowledge Discovery im Maschinenlernen</title>
@@ -105,7 +158,7 @@
                             <imagedata fileref="../img/Abb9_KDD_Process.png" width="100%"/>
                         </imageobject>
                     </mediaobject>
-                    <caption><para>(Aus <biblioref linkend="bib_BGSV09"/>, S. 62)</para></caption>
+                    <caption><para>(Aus <biblioref linkend="bib_BGSV09"/>, S. 62; vgl. die etwas ausführlichere Variante in <biblioref linkend="bib_MR2005"/>, S. 3)</para></caption>
                 </figure>
                 <para>Die folgenden drei Kapitel fokussieren auf die Phase <emphasis>Interpretation &amp; Evaluation</emphasis>, indem sie drei Maschinenlernverfahren 
                     vorstellen und die mit diesen Verfahren erzielten Ergebnisse bezüglich der angestrebten E-Book-Klassifikation berichten. Gegenstand dieser Kapitel sind
@@ -156,17 +209,6 @@
                     auf Ziel- oder Interessentengruppen ein Teil eines <glossterm linkend="gt_empfehlungsdienst">Empfehlungsdienstes</glossterm> 
                     werden könnten. Hierzu wären aber weitere Untersuchungen und ein größeres Maß an Transferleistung vonnöten.</para>
             </sect2>
-            <sect2><!-- Darstellungskonventionen -->
-                <title>Darstellungskonventionen</title>
-                <para>Diese Arbeit wurde in DocBook 5.0, einem OASIS-Standard<footnote><para><link xlink:href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=docbook"/>
-                    (Zugriff am 24.2.2018).</para></footnote>, ausgezeichnet und mit einer modifizierten XSL-FO-Transformation aus dem DocBook-XSL-Werkzeugkasten
-                    nach PDF gerendert. Glossarbegriffe sind mindestens bei ihrer ersten Erwähnung kursiv dargestellt. Glossarbegriffe, bibliografische Hinweise, 
-                    Verweise auf Tabellen, Abbildungen und Kapitel oder Abschnitte sind in der PDF-Version verlinkt. Es empfiehlt sich beim Lesen der PDF-Datei auf einem 
-                    Computer einen PDF-Reader mit „Zurück“-Button zu verwenden, um leicht zwischen verlinkten Elementen und dem Ursprung der Verlinkung hin- und 
-                    herspringen zu können. In Verweisen auf Kapitel, Abschnitte, Abbildungen und Tabellen wird die Seitenzahl in eckigen Klammern hinter den Verweis 
-                    gesetzt, um auch in der gedruckten Version solchen Verweisen leicht folgen zu können. Programmcode sowie Methoden- und Klassennamen aus 
-                    Programmen sind in <code>nichtproportionaler Schrift</code> ausgezeichnet.</para>
-            </sect2>
         </sect1>
         <sect1 xml:id="ch_WGSdDB"><!-- Die Warengruppensystematik des Deutschen Buchhandels -->
             <title>Die Warengruppensystematik <indexterm class="startofrange" xml:id="idt_002"><primary>Warengruppensystematik</primary></indexterm> des Deutschen Buchhandels</title>
@@ -176,16 +218,16 @@
                 Klassifikation in der Kritik, sich für die dort nötigen betriebswirtschaftlichen Auswertungen nicht zu eignen. Deshalb wurde 
                 in zwei Schritten eine eigene Warengruppensystematik für den Buchhandel entwickelt. Die endgültige Fassung (Version 2.0) 
                 wurde zum 1. Januar 2007 zum Branchenstandard erhoben und seither von allen Branchenteilnehmern (Verlage, Zwischenbuchhandel, 
-                Sortimentsbuchhandel) verwendet  (<biblioref linkend="bib_ABC14"/>, S. 48/49). Das Verzeichnis Lieferbarer Bücher<indexterm>
+                Sortimentsbuchhandel) verwendet  (<biblioref linkend="bib_ABC14"/>, S. 48/49).
+
+                Das Verzeichnis Lieferbarer Bücher<indexterm>
                     <primary>Verzeichnis Lieferbarer Bücher</primary></indexterm> (VLB) machte die Angabe von genau einer Warengruppe pro 
                 Produkt ab 1. Januar 2008 zur Pflichtangabe (<biblioref linkend="bib_BBL07"/>).</para>
             <para>Die Warengruppen<indexterm><primary>Warengruppe</primary></indexterm>, die die Warengruppensystematik des Deutschen 
                 Buchhandels Version 2.0 definiert, werden durch eine vierstellige Zahl codiert. Die erste Stelle steht für die Editionsform
                 (z.&#160;B. Hardcover, Taschenbuch, CD-ROM, Kalender), die zweite Stelle codiert die Haupt-Warengruppe (z.&#160;B. Belletristik, Ratgeber,
                 Naturwissenschaften), die dritte und vierte Stelle schließlich dienen der Feindifferenzierung (<biblioref linkend="bib_WGS06"/>).</para>
-            <para>Da für unsere Zwecke eine primär inhaltliche Klassifikation angestrebt wird, ignorieren wir im Folgenden die 
-                erste Stelle zur Editionsform und betrachten als Warengruppe i.e.S. die Ziffern zwei bis vier.</para>
-            <?dbfo-need height="8cm"?>
+            <?dbfo-need height="5cm"?>
             <sidebar> <!-- Hauptwarengruppen -->
                 <?dbfo sidebar-width="10cm"?>
                 <?dbfo float-type="left"?>
@@ -211,6 +253,8 @@
                     </tgroup>
                 </table>
             </sidebar>
+            <para>Da für unsere Zwecke eine primär inhaltliche Klassifikation angestrebt wird, ignorieren wir im Folgenden die 
+                erste Stelle zur Editionsform und betrachten als Warengruppe i.e.S. die Ziffern zwei bis vier.</para>
             <para>Die Warengruppen sind insofern binnenstrukturiert, als dass unterhalb der jeweiligen Haupt-Warengruppe eine 
                 blockweise Gruppierung anhand der Zehnerstelle erfolgt (siehe <xref linkend="abb1"/>). So finden sich in der Haupt-Warengruppe
                 1 (Belletristik) 
@@ -403,23 +447,42 @@
                 Entwickler die umfangreiche Weka-Dokumentation inzwischen so modularisiert, dass daraus auch ein allgemeines Lehrbuch entstanden 
                 ist, das nur noch durch lose Verweise mit dem Framework verbunden ist (<biblioref linkend="bib_WFHP17"/>). Aus allen diesen Gründen hat sich
                 auch für das oben skizzierte Klassifikationsvorhaben die Verwendung von Werkzeugen aus dem Weka-Framework angeboten.</para>
-            <para>Die leichte Verfügbarkeit von Maschinenlernwerkzeugen verführt dazu, eine große Zahl von Algorithmen durchzuprobieren, ohne sich
-                intensiv damit zu beschäftigen und somit auch ohne sie zu verstehen. Dies wird auch in der Maschinenlern-Community durchaus beklagt. 
-                So warnen etwa Witten et al. in <biblioref linkend="bib_WFHP17"/> (S. 286) einerseits davor, ein Maschinenlernverfahren zu 
-                verwenden, ohne seine Parameter zu verstehen und andererseits davor, sich allein auf die Leistung eines Verfahrens in Bezug auf
-                die Trainingsdaten zu verlassen, da ein solch einseitiges Vorgehen die Gefahr der <indexterm><primary>Überanpassung</primary>
-                </indexterm><glossterm linkend="gt_überanpassung">Überanpassung</glossterm> (engl. overfitting) missachtet<footnote><para>Das Phänomen,
-                    wissenschaftliche und technische Errungenschaften zu verwenden, ohne sich für deren Funktionsweise zu interessieren, kritisierte
-                    Arthur Koestler schon in den 1950er Jahren auf eindrucksvolle
-                Weise: „Modern man lives isolated in his artificial environment, not because the artificial is evil as such, but because of 
-                his lack of comprehension of the forces which make it work &#8211; of the principles which relate his gadgets to the forces of nature, 
-                to the universal order. It is not central heating which makes his existence 'unnatural', but his refusal to take an interest in the 
-                principles behind it. By being entirely dependent on science, yet closing his mind to it, he leads the life of an urban barbarian.“
-                (Arthur Koestler: „The Act of Creation. The Danube Edition“. London: Pan Books 1970, S. 247).</para></footnote>. Andererseits ist es
-                meines Erachtens sowohl legitim als auch interessant, eine größere Zahl von Maschinenlernverfahren mit einem bestimmten Interesse
-                <indexterm><primary>Empirie</primary></indexterm>durchzuprobieren um so ein grobes Gefühl dafür zu bekommen, welche Verfahren sich 
-                für die eigenen Ziele eher eignen und welche weniger, um dann in einem Folgeschritt mit den vielversprechendsten weiter zu arbeiten.
-                Die oben angesprochene Gefahr der Überanpassung ist dabei natürlich im Blick zu behalten.</para>
+            <para>Die leichte Verfügbarkeit von Maschinenlernwerkzeugen verführt dazu, eine große
+                Zahl von Algorithmen durchzuprobieren, ohne sich intensiv damit zu beschäftigen und
+                somit auch ohne sie zu verstehen. Dies wird auch in der Maschinenlern-Community
+                durchaus beklagt. So warnen etwa Witten et al. in <biblioref linkend="bib_WFHP17"/>
+                (S. 286) einerseits davor, ein Maschinenlernverfahren zu verwenden, ohne seine
+                Parameter zu verstehen und andererseits davor, sich allein auf die Leistung eines
+                Verfahrens in Bezug auf die Trainingsdaten zu verlassen, da ein solch einseitiges
+                Vorgehen die Gefahr der <indexterm><primary>Überanpassung</primary></indexterm><glossterm
+                    linkend="gt_überanpassung">Überanpassung</glossterm> (engl. overfitting) missachtet<footnote>
+                    <para>Das Phänomen, wissenschaftliche und technische Errungenschaften zu
+                        verwenden, ohne sich für deren Funktionsweise zu interessieren, kritisierte
+                        Arthur Koestler schon in den 1950er Jahren auf eindrucksvolle Weise: „Modern
+                        man lives isolated in his artificial environment, not because the artificial
+                        is evil as such, but because of his lack of comprehension of the forces
+                        which make it work &#8211; of the principles which relate his gadgets to the
+                        forces of nature, to the universal order. It is not central heating which
+                        makes his existence 'unnatural', but his refusal to take an interest in the
+                        principles behind it. By being entirely dependent on science, yet closing
+                        his mind to it, he leads the life of an urban barbarian.“ (Arthur Koestler:
+                        „The Act of Creation. The Danube Edition“. London: Pan Books 1970, S.
+                        247).</para>
+                </footnote>. Andererseits ist es meines Erachtens sowohl legitim als auch
+                interessant, eine größere Zahl von Maschinenlernverfahren mit einem bestimmten
+                Interesse <indexterm><primary>Empirie</primary></indexterm>durchzuprobieren um so ein grobes Gefühl dafür zu bekommen, welche
+                Verfahren sich für die eigenen Ziele eher eignen und welche weniger, um dann in
+                einem Folgeschritt mit den vielversprechendsten weiter zu arbeiten. Dieses Vorgehen
+                ist insbesondere auch deshalb angebracht, weil die Ergebnisqualität
+                unterschiedlicher Lernverfahren auf denselben Daten stark und in schwer
+                vorhersehbarer Weise voneinander abweichen kann: „[E]ach algorithm contains an
+                explicit or implicit bias that leads it to prefer certain generalizations over
+                others, and it will be successful only as long as this bias matches the
+                characteristics of the application domain. [...] If one inducer is better than
+                another in some domains, then there are necessarilly other domains in which this
+                relationship is reversed“ (<biblioref linkend="bib_MR2005"/> S. 9). Die oben
+                angesprochene Gefahr der Überanpassung ist dabei natürlich im Blick zu
+                behalten.</para>
             <para>So wurde auch in der vorliegenden Arbeit vorgegangen: In Weka wurde zunächst ermittelt, welche Klassifizierer sich prinzipiell 
                 für die vorliegenden Daten eignen (benötigt wurde die Fähigkeit des Umgangs mit numerischen Attributen und <glossterm
                     linkend="gt_nominelle_klasse">nominellen Klassen</glossterm>).
@@ -455,14 +518,20 @@
             <listitem>
                 <para>Verwendung von Texteigenschaften, die sich bei Verwendung bestimmter Programmier&#xAD;bibliotheken leicht herausarbeiten lassen.</para>
             </listitem>
+            <listitem>
+                <para>Verwendung von Texteigenschaften, die sich in statistischer und sonstiger berechenbarer Art und Weise als informationshaltig 
+                    erweisen.</para>
+            </listitem>
         </itemizedlist>
         <para>Mit Blick auf die später zu erwartende Performance der Lern- und Klassifizierungsalgorithmen ist in dieser Phase aber ebenfalls zu 
             berücksichtigen, dass die Menge an Texteigenschaften, mit denen gearbeitet wird, möglichst klein gehalten werden sollte. Bei der 
             Textmenge, die unserer Untersuchung zugrunde liegt, führt ein ungefilterter Bag-of-Words-Ansatz (siehe <xref linkend="ch_LexSemProp"/>) leicht zu einer 
             Menge von über 2.000.000 Attributen. Beim Lernen mit einer Supportvektormaschine (siehe <xref linkend="ch_SVM" /> würden dann Hyperebenen 
-            gesucht, welche die zu lernenden Klassen im über 2.000.000-dimensionalen Raum trennen. Dieses Beispiel zeigt, dass die Anzahl der 
-            Textattribute einen starken Einfluss auf die Komplexität der mathematischen Berechnungen beim Trainieren eines Textklassifikators haben kann.
-        </para>
+            gesucht, welche die zu lernenden Klassen im über 2.000.000-dimensionalen Raum trennen. Dieses Beispiel zeigt, dass die Anzahl der Textattribute
+            einen starken Einfluss auf die Komplexität der mathematischen Berechnungen beim Trainieren eines Textklassifikators haben kann. Zudem schlägt
+            hier der „Fluch der Dimensionalität“ (<biblioref linkend="bib_RN16"/> nach Richard Bellman) voll zu: je höher die Dimensionalität, desto
+            geringer werden die Unterschiede bei den Distanzen zwischen einzelnen Punkten. Bei gleicher Anzahl von Datenpunkten und steigender Dimension
+            wird die räumliche Verteilung der Punkte somit immer weniger aussagekräftig.</para>
         <para>Eine ausführliche Diskussion der Ermittlung von Textattributen erfolgt in <xref linkend="ch_TextProp"/></para>
         <sect1 xml:id="ch_Korpus"> <!-- Das Korpus -->
             <info>
@@ -1140,9 +1209,9 @@
                         term-basierte als auch konzept-basierten Attribute enthielt. Die Verbesserungen durch die Verwendung von Konzepten war in mehr als
                         der Hälfte der Fälle statistisch signifikant. Von der Zugabe der Konzepte konnten vor allem kleinere Klassen profitieren.</para>
                     <para>Die Studie von <biblioref linkend="bib_BH06"/> arbeitete mit englischsprachigen Texten und setzte als Ontologie WordNet der Princeton University
-                        ein. Eine deutsche Variante namens GermaNet wird an der Universität Tübingen gepflegt<footnote><para><link xlink:href="http://www.sfs.uni-tuebingen.de/GermaNet/index.shtml"/>
+                        ein. Eine deutsche Variante namens <indexterm><primary>GermaNet</primary></indexterm>GermaNet wird an der Universität Tübingen gepflegt<footnote><para><link xlink:href="http://www.sfs.uni-tuebingen.de/GermaNet/index.shtml"/>
                             (Zugriff 11.03.2018).</para></footnote>, konnte aber aufgrund restriktiver Lizenzbedingungen in der vorliegenden Studie nicht genutzt werden.
-                        Stattdessen kam der OpenThesaurus zum Einsatz<footnote><para><link xlink:href="https://www.openthesaurus.de/about/download"/> (Zugriff am 11.03.2018).
+                        Stattdessen kam der <indexterm><primary>OpenThesaurus</primary></indexterm>OpenThesaurus zum Einsatz<footnote><para><link xlink:href="https://www.openthesaurus.de/about/download"/> (Zugriff am 11.03.2018).
                         </para></footnote>, der ca. 40.000 Konzepte (Synsets) und knapp 160.000 Wörter und Wortgruppen enthält.</para>
                     <para>Da sich die Berechnungsdauer der E-Book-Aufbereitung für unser Korpus von knapp 7.000 E-Books durch Hinzufügung der Oberbegriffe mehr als 
                         verdreifachte (von ca. 30 auf über 100 Stunden), wurde dieser Vorverarbeitungsschritt nicht in jedem neuen Versuchslauf mit durchgeführt, sondern
@@ -1577,7 +1646,7 @@
                 <para>Kommt z.B. der zweite diskrete Attributwert in Klasse Nummer 1 insgesamt 5 Mal vor, so enthält die oben veranschaulichte 
                     Matrix an der Position <emphasis>a<subscript>a<subscript>2</subscript>c<subscript>1</subscript></subscript></emphasis>
                     den Wert 5. &#919;(C) lässt sich nun leicht spaltenweise berechnen: die Summe der Werte der ersten Spalte in der Matrix ergibt die 
-                    Häufigkeit der ersten Klasse, die Summer der Werte der zweiten Spalte entspricht der Häufigkeit der zweiten Klasse, usw. Wekas
+                    Häufigkeit der ersten Klasse, die Summe der Werte der zweiten Spalte entspricht der Häufigkeit der zweiten Klasse, usw. Wekas
                     <emphasis>InfoGainAttributeEval</emphasis> rechnet intern mit der Vorkommenshäufigkeit <emphasis>w</emphasis> statt mit 
                     Wahrscheinlichkeitswerten <emphasis>p</emphasis> sowie mit dem natürlichen Logarithmus und nimmt erst anschließend eine Konvertierung 
                     nach <emphasis>p</emphasis> und den Logarithmus zur Basis 2 vor, was durch den Nenner in der folgenden Formel geschieht:</para>
@@ -2015,27 +2084,27 @@
                             </row>
                         </thead>
                         <tbody>
-                            <row><entry>Quotient der finiten Verben</entry><entry>finiteMainVerbsRatio</entry><entry>1.1229</entry></row>
-                            <row><entry>Quotient der Personalpronomen</entry><entry>personalPronounRatio</entry><entry>0.9729</entry></row>
-                            <row><entry>Quotient der Nomen</entry><entry>ratioOfNouns</entry><entry>0.9409</entry></row>
-                            <row><entry>Quotient von Kompositumsteilen</entry><entry>compoundPartRatio</entry><entry>0.9018</entry></row>
-                            <row><entry>durchschnittliche Wortlänge</entry><entry>averageWordLength</entry><entry>0.8738</entry></row>
-                            <row><entry>Quotient der Kardinalzahlen</entry><entry>ratioOfCardinals</entry><entry>0.8631</entry></row>
-                            <row><entry>Quotient der Antwortpartikel</entry><entry>answerParticleRatio</entry><entry>0.7576</entry></row>
-                            <row><entry>Quotient der Relativpronomen</entry><entry>attrRelPronRatio</entry><entry>0.7122</entry></row>
-                            <row><entry>Quotient der attributiven Possessivpronomen</entry><entry>attrPossPronRatio</entry><entry>0.7122</entry></row>
-                            <row><entry>Quotient der Infinitive</entry><entry>infinitiveMainVerbsRatio</entry><entry>0.6731</entry></row>
-                            <row><entry>Quotient der Interrogativpronomen</entry><entry>interrogativePronounRatio</entry><entry>0.6725</entry></row>
-                            <row><entry>Gesamtzahl der vorkommenden Wortarten</entry><entry>uniquePartsOfSpeech</entry><entry>0.5913</entry></row>
-                            <row><entry>Quotient der Negationspartikel</entry><entry>negationParticleRatio</entry><entry>0.5857</entry></row>
-                            <row><entry>Vorkommen des Wortes <emphasis>nicken</emphasis></entry><entry>w_nicken</entry><entry>0.5733</entry></row>
-                            <row><entry>Vorkommen des Wortes <emphasis>schütteln</emphasis></entry><entry>w_schütteln</entry><entry>0.5594</entry></row>
-                            <row><entry>Vorkommen des Wortes <emphasis>lächeln</emphasis></entry><entry>w_lächeln</entry><entry>0.5417</entry></row>
-                            <row><entry>Quotient der Adjektive</entry><entry>ratioOfAdjectives</entry><entry>0.535</entry></row>
-                            <row><entry>Anzahl der Abbildungen</entry><entry>numberOfImages</entry><entry>0.5234</entry></row>
-                            <row><entry>Quotient der Passivsätze</entry><entry>ratioOfPassiveSentences</entry><entry>0.5233</entry></row>
-                            <row><entry>Vorkommen des Wortes <emphasis>starren</emphasis></entry><entry>w_starren</entry><entry>0.5216</entry></row>
-                            <row><entry>Quotient der Namen</entry><entry>ratioOfNamedEntities</entry><entry>0.5183</entry></row>
+                            <row><entry>Quotient der finiten Verben</entry><entry>finiteMainVerbsRatio</entry><entry>1,1229</entry></row>
+                            <row><entry>Quotient der Personalpronomen</entry><entry>personalPronounRatio</entry><entry>0,9729</entry></row>
+                            <row><entry>Quotient der Nomen</entry><entry>ratioOfNouns</entry><entry>0,9409</entry></row>
+                            <row><entry>Quotient von Kompositumsteilen</entry><entry>compoundPartRatio</entry><entry>0.,9018</entry></row>
+                            <row><entry>durchschnittliche Wortlänge</entry><entry>averageWordLength</entry><entry>0,8738</entry></row>
+                            <row><entry>Quotient der Kardinalzahlen</entry><entry>ratioOfCardinals</entry><entry>0,8631</entry></row>
+                            <row><entry>Quotient der Antwortpartikel</entry><entry>answerParticleRatio</entry><entry>0,7576</entry></row>
+                            <row><entry>Quotient der Relativpronomen</entry><entry>attrRelPronRatio</entry><entry>0,7122</entry></row>
+                            <row><entry>Quotient der attributiven Possessivpronomen</entry><entry>attrPossPronRatio</entry><entry>0,7122</entry></row>
+                            <row><entry>Quotient der Infinitive</entry><entry>infinitiveMainVerbsRatio</entry><entry>0,6731</entry></row>
+                            <row><entry>Quotient der Interrogativpronomen</entry><entry>interrogativePronounRatio</entry><entry>0,6725</entry></row>
+                            <row><entry>Gesamtzahl der vorkommenden Wortarten</entry><entry>uniquePartsOfSpeech</entry><entry>0,5913</entry></row>
+                            <row><entry>Quotient der Negationspartikel</entry><entry>negationParticleRatio</entry><entry>0,5857</entry></row>
+                            <row><entry>Vorkommen des Wortes <emphasis>nicken</emphasis></entry><entry>w_nicken</entry><entry>0,5733</entry></row>
+                            <row><entry>Vorkommen des Wortes <emphasis>schütteln</emphasis></entry><entry>w_schütteln</entry><entry>0,5594</entry></row>
+                            <row><entry>Vorkommen des Wortes <emphasis>lächeln</emphasis></entry><entry>w_lächeln</entry><entry>0,5417</entry></row>
+                            <row><entry>Quotient der Adjektive</entry><entry>ratioOfAdjectives</entry><entry>0,535</entry></row>
+                            <row><entry>Anzahl der Abbildungen</entry><entry>numberOfImages</entry><entry>0,5234</entry></row>
+                            <row><entry>Quotient der Passivsätze</entry><entry>ratioOfPassiveSentences</entry><entry>0,5233</entry></row>
+                            <row><entry>Vorkommen des Wortes <emphasis>starren</emphasis></entry><entry>w_starren</entry><entry>0,5216</entry></row>
+                            <row><entry>Quotient der Namen</entry><entry>ratioOfNamedEntities</entry><entry>0,5183</entry></row>
                         </tbody>
                     </tgroup>
                 </table>
@@ -2219,8 +2288,9 @@
                 können.</para>
             <para>Im zweiten Durchlauf wird dann aus jeder temporären Datei eine Weka-Datei im <indexterm><primary>XRFF</primary></indexterm>XRFF-Format generiert, wobei auf 
                 Informationen im Lucene-Index zurückgegriffen wird, der nun, nach vollständigem ersten Durchlauf durch alle Eingabedateien, alle Lemmata des gesamten Korpus
-                enthält und somit für dokumentübergreifende TF/IDF-Berechnungen zur Verfügung steht. Dies ist für die Erstellung der in <xref linkend="ch_AttribEval_StringToWordVector"/>
-                besprochenen Liste der wichtigsten Wörter notwendig. Zuletzt werden dann die einzelnen XRFF-Dateien zu einem gemeinsamen XRFF-File für das gesamte Korpus 
+                enthält und somit für dokumentübergreifende <indexterm><primary>TF/IDF</primary></indexterm>TF/IDF-Berechnungen zur Verfügung steht. Dies ist für
+                die Erstellung der in <xref linkend="ch_AttribEval_StringToWordVector"/>besprochenen Liste der wichtigsten Wörter notwendig. Zuletzt werden
+                dann die einzelnen XRFF-Dateien zu einem gemeinsamen XRFF-File für das gesamte Korpus 
                 zusammengefasst. In diesem Schritt wird auch eine Liste aller Klassen zusammengestellt, welche von Weka als Enumeration aller möglichen Werte benötigt wird.</para>
             <para>Die beiden beschriebenen Avve-Durchläufe werden je einmal für die Trainingsdaten und einmal für die Testdaten durchgeführt, wobei beide Durchläufe in denselben
                 Lucene-Index schreiben. Als Resultat erhält man jeweils eine XRFF-Datei für die Trainings- und eine für die Testdaten.<indexterm class="endofrange" startref="idt_Avve01"/></para>
@@ -2296,7 +2366,7 @@
                     klassifizierten Datensätze und N = Gesamtzahl der Testdatensätze ergibt sich die beobachtete Erfolgsquote aus der Gleichung <inlineequation>
                         <mathphrase>f = S / N</mathphrase></inlineequation>. Diese Quote wurde bereits in <xref linkend="ch_AttribEval_StringToWordVector"/> verwendet.
                     Mit allgemeinen statistischen Gesetzmäßigkeiten lassen sich aus dieser Quote auch Aussagen über Konfidenzintervalle ableiten, z.&#160;B. „Mit x-prozentiger 
-                    Wahrscheinlichkeit liegt die Quote korrekt klassifizierter Daten zwischen y Prozent und z Prozent“ (<biblioref linkend="bib_WFHP17"/></para>
+                    Wahrscheinlichkeit liegt die Quote korrekt klassifizierter Daten zwischen y Prozent und z Prozent“ (<biblioref linkend="bib_WFHP17"/>).</para>
             </sect2>
             <sect2 xml:id="ch_Evaluation_Kennzahlen_Relevanz-Sensitivität">
                 <title>Trefferquote und Genauigkeit</title>
@@ -2815,7 +2885,13 @@
                 Das Naïve-Bayes-Verfahren ist dennoch seit Jahrzehnten in der Textklassifikationspraxis sehr beliebt, da es trotz der vermuteten oder
                 tatsächlichen Missachtung des Unabhängigkeitspostulats gute Ergebnisse auch im
                 Vergleich mit anderen Maschinenlernverfahren erzielt (<biblioref linkend="bib_JL95"/>, S. 388). Jedoch lässt sich gewöhnlich bei 
-                Anstieg der Zahl nicht unabhängiger Attribute eine Verschlechterung des Klassifikators beobachten.</para>
+                Anstieg der Zahl nicht unabhängiger Attribute eine Verschlechterung des Klassifikators beobachten.<footnote><para>Ein einfaches Beispiel für 
+                die Verschlechterung des Klassifikators bei hoher Abhängigkeit von Wörtern geben <biblioref linkend="bib_RSTK03"/>, S. 619: Wenn man Dokumente
+                     klassifiziert danach, ob es  in ihnen um Boston oder San Francisco geht und zudem annimmt, das die Worte „San“ und „Francisco“ selten 
+                     allein vorkommen, dann würde ein Dokument, in dem fünf mal „Boston“ und drei Mal „San Francisco“ vorkommt, fälschlicherweise als ein
+                     Dokument, in dem es vor allem um San Francisco geht, klassifiziert. Anders gesagt: Bezüglich der Klassenverteilung hat „San Francisco“
+                     ein doppelt so starkes Gewicht wie „Boston“. Dies führt wiederum dazu, dass die Klasse „San Francisco“ vom Klassifikator
+                     ungerechtfertigterweise bevorzugt wird.</para></footnote></para>
             <para>Da der Wertebereich unserer Attribute nicht diskret-nominell, sondern kontinuierlich ist, lässt sich die Wahrscheinlichkeit eines
                 Attributwerts nicht so leicht berechnen, wie die Wahrscheinlichkeit der nominellen Warengruppen-Klassen. Die Naïve-Bayes-Implementierung von 
                 Weka nimmt in der Defaulteinstellung für jedes Attribut eine Gaußsche <indexterm><primary>Normalverteilung</primary></indexterm>Normalverteilung an
@@ -3439,7 +3515,7 @@
                         auch wenn man von den 69 offensichtlich verdoppelten Attributen jeweils eines entfernt<footnote><para>Hier zeigt sich exemplarisch der Vorteil, der
                             sich aus der Verwendung der XML-Dateivariante <indexterm><primary>XRFF</primary></indexterm> gegenüber dem <indexterm><primary>ARFF</primary>
                             </indexterm>ARFF-Format ergibt: Man kann in der XML-Welt die Lokalisierungssprache XPath und/oder
-                        die Abfragesprache <indexterm><primary>XQuery</primary></indexterm> nutzen und sowohl übersichtliche als auch leicht verständliche deklarative Abfragen formulieren, die im ARFF-Format schwieriger
+                        die Abfragesprache <indexterm><primary>XQuery</primary></indexterm>XQuery nutzen und sowohl übersichtliche als auch leicht verständliche deklarative Abfragen formulieren, die im ARFF-Format schwieriger
                         zu bewerstelligen wären. Sind alle Wortattribute aus dem kontrollierten Vokabular mit "cv_" präfigiert und alle normalen Wortvektorattribute mit "w_",
                         lassen sich die <indexterm><primary>Duplikate</primary></indexterm>Duplikate in XQuery (inklusive Attributindex, den man zum späteren Entfernen der Attribute benötigt) finden:</para>
                             <para><code>for $cvat in //attribute[starts-with(@name, 'cv_')]</code></para>
@@ -3450,7 +3526,7 @@
                         </footnote>, gelangt man zu demselben Ergebnis. Dennoch bleibt die
                         Hypothese, dass sich bei Zugabe des kontrollierten Vokabulars die Unabhängigkeit der Attribute insgesamt verringert, plausibel.</para>
                     <para>Es wurde auch ein Versuch unternommen, bei dem die Wortvektorattribute komplett entfernt wurden und nur mit dem kontrollierten Vokabular
-                        trainiert und evaluiert wure. Diese Variante performte deutlich schlechter, die Erfolgsquote lag fast bei der Hälfte. Unter Umständen würde
+                        trainiert und evaluiert wurde. Diese Variante performte deutlich schlechter, die Erfolgsquote lag fast bei der Hälfte. Unter Umständen würde
                         statt der unmittelbaren Verwendung von Wörtern aus der offiziellen Warengruppenbeschreibung ein von Experten verfasstes kontrolliertes Vokabular
                         besser funktionieren, doch wäre hier zunächst einmal zu klären, was eine VLB-Warengruppenexpertin überhaupt ausmacht.</para>
                     <table frame="all" xml:id="tab_NB_mit_CV"><!-- Ergebnisse Naïve Bayes mit kontrolliertem Vokabular -->
@@ -3517,7 +3593,8 @@
                         bietet Avve über einen Kommandozeilenparameter die Möglichkeit, die <indexterm><primary>Indexierung</primary></indexterm>Indexierung von 
                         Wörtern in Fremdsprachen zu unterbinden. Dies setzt allerdings voraus, dass der <indexterm><primary>POS-Tagging</primary></indexterm>
                         Wortarten-Tagger solche Wörter korrekt erkennt. Die diesbezügliche Trefferquote des in unserer Studie verwendeten TreeTaggers lässt allerdings 
-                        sehr zu wünschen übrig. Der TreeTagger verwendet das Stuttgart-Tübingen Tag Set (STTS, <biblioref linkend="bib_STST99"/>), welches für 
+                        sehr zu wünschen übrig. Der TreeTagger verwendet das <indexterm><primary>Stuttgart-Tübingen Tag Set (STTS)</primary></indexterm>Stuttgart-Tübingen
+                        Tag Set (STTS, <biblioref linkend="bib_STST99"/>), welches für 
                         fremdsprachliches Material das Tag <emphasis>FM</emphasis> vorsieht. Eine Auflistung beobachteter Fehlklassifikationen gibt <xref
                             linkend="tab_falsch_klassifizierte_FM_Tags"/>. Eine Auszählung korrekt klassifizierter FM-Wörter fand aus Zeitgründen nicht statt, so
                         dass wir keine exakten Angaben zur Genauigkeit (Precision) und Trefferquote (Recall) des TreeTaggers in Bezug auf FM geben können. Es lässt 
@@ -4642,7 +4719,8 @@
                     SMO-Klassifikators übertraf, sondern lediglich erreichte (bei C = 10000 und &#947; = 0,0001). Die Trainingsdauer lag wie bereits erwähnt
                     bei allen Versuchen mit RBF-Kernel im Bereich mehrerer Stunden, bei linearen SMO hingegen bei ca. 11 Minuten, so dass hier eine 
                     klare Präferenz für das einfachere, lineare Verfahren abgeleitet werden kann. Unser Lernproblem scheint aus annähernd linear trennbaren
-                    Teilproblemen zu bestehen. Es wurde keine nicht-lineare SVM gefunden, die eine bessere Erfolgsquote erzielt als eine lineare SVM.</para>
+                    Teilproblemen zu bestehen. Es wurde keine nicht-lineare SVM gefunden, die eine bessere Erfolgsquote erzielt als eine lineare SVM. Diese
+                    Beobachtung deckt sich mit der ebenfalls experimentell ermittelten Beobachtung von <biblioref linkend="bib_YL99"/>.</para>
             </sect2>
             <sect2 xml:id="ch_SMO_improve_ensemble"> <!-- SMO: Ensemble Learning -->
                 <title>Ensemble Learning</title>
@@ -4845,7 +4923,7 @@
                                     <entry>SMO ohne Optimierungen</entry>
                                     <entry>16.270</entry>
                                     <entry>3m 50s (Training), 7m (Evaluation)</entry>
-                                    <entry>66,62</entry>
+                                    <entry>66,62%</entry>
                                 </row>
                                 <row>
                                     <entry>36</entry>
@@ -5595,7 +5673,8 @@
                 enthält. Möchte man Konfigurationsparameter ändern, sollte man dies in den von Github heruntergeladenen Sourcen tun, bevor man das Projekt
                 mit Maven erstellt. Die Konfigurationsdateien, z.&#160;B. für Lemma- und Wortartenkorrektur oder für den Zugriff auf die OpenThesaurus-Datenbank,
                 befinden sich in Unterordnern von <code>src/main/resources</code>.</para>
-            <para>Möchte man auch die Einspeisung von Oberbegriffen (<indexterm><primary>Hyperonym</primary></indexterm>Hyperonymen) verwenden, so benötigt man den OpenThesaurus als MySQL-Dump, der hier
+            <para>Möchte man auch die Einspeisung von Oberbegriffen (<indexterm><primary>Hyperonym</primary></indexterm>Hyperonymen) verwenden, so benötigt man den
+                <indexterm><primary>OpenThesaurus</primary></indexterm>OpenThesaurus als MySQL-Dump, der hier
                 erhältlich ist: <link xlink:href="https://www.openthesaurus.de/about/download"/> (Zugriff 1.4.2018). Man importiert diesen Dump in eine
                 beliebige MySQL-Datenbank und gibt die Zugriffsdaten (Datenbankhost, Username, Passwort) in der Ressourcendatei <code>hyperonym/hyperonym.properties</code>
                 an.</para>
@@ -5912,7 +5991,7 @@
                         <entry>26713</entry> <!-- Attributzahl -->
                         <entry>157</entry> <!-- Klassenzahl -->
                         <entry>20h 10m</entry> <!-- Dauer -->
-                        <entry>54,86%</entry> <!-- Erfolgsquote -->
+                        <entry>45,04%</entry> <!-- Erfolgsquote -->
                         <entry></entry> <!-- Bemerkung -->
                     </row>
                     <row>
@@ -5994,6 +6073,10 @@
     <bibliography><!-- Bibliografie -->
         <title>Bibliografie</title>
         <!-- TODO: Koestler in Bibliografie aufnehmen? -->
+        <!--<bibliomixed role="monograph" xml:id="bib_ABC14mixed">
+            <abbrev>ABC14</abbrev> <editor><personname>BEZ, Thomas</personname></editor> (Hg.): <title>ABC des Zwischenbuchhandels</title>, 7. Auflage. 
+            Frankfurt am Main: Börsenverein des Deutschen Buchhandels, <pubdate>2014</pubdate>. <pagenums>50 S.</pagenums>
+        </bibliomixed>-->
         <biblioentry role="monograph" xml:id="bib_ABC14">
             <abbrev>ABC14</abbrev>
             <editor><personname><firstname>Thomas</firstname><surname>Bez</surname></personname></editor>
@@ -6156,6 +6239,25 @@
             <edition>Dritte, aktualisierte und erweiterte Auflage</edition>
             <pagenums>783</pagenums>
             <biblioid class="isbn">3-520-45203-0</biblioid>
+        </biblioentry>
+        <biblioentry role="monograph" xml:id="bib_Cha2000">
+            <abbrev>Cha00</abbrev>
+            <authorgroup>
+                <author><personname><firstname>Pete</firstname><surname>Chapman</surname></personname></author>
+                <author><personname><firstname>Julian</firstname><surname>Clinton</surname></personname></author>
+                <author><personname><firstname>Randy</firstname><surname>Kerber</surname></personname></author>
+                <author><personname><firstname>Thomas</firstname><surname>Khabata</surname></personname></author>
+                <author><personname><firstname>Thomas</firstname><surname>Reinartz</surname></personname></author>
+                <author><personname><firstname>Colin</firstname><surname>Shearer</surname></personname></author>
+                <author><personname><firstname>Rüdiger</firstname><surname>Wirth</surname></personname></author>
+            </authorgroup>
+            <title xml:lang="en">CRISP-DM 1.0</title>
+            <publisher>
+                <publishername>CRISP-DM Consortium</publishername>
+            </publisher>
+            <pubdate>2000</pubdate>
+            <pagenums>73</pagenums>
+            <biblioid class="uri">ftp://ftp.software.ibm.com/software/analytics/spss/support/Modeler/Documentation/14/UserManual/CRISP-DM.pdf</biblioid>
         </biblioentry>
         <biblioentry role="messagesystem" xml:id="bib_DNB03">
             <abbrev>DNB03</abbrev>
@@ -6414,7 +6516,7 @@
             <abbrev>KW14</abbrev>
             <authorgroup>
                 <author><personname><firstname>Markus</firstname><surname>Klose</surname></personname></author>
-                <author><personname><firstname>Daniel</firstname><surname>Wirgley</surname></personname></author>
+                <author><personname><firstname>Daniel</firstname><surname>Wrigley</surname></personname></author>
             </authorgroup>
             <title xml:lang="de">Einführung in Apache Solr. Praxiseinstieg in die innovative Suchtechnologie</title>
             <edition>1. Auflage</edition>
@@ -6472,6 +6574,21 @@
                 <pagenums>12 S.</pagenums>
                 <biblioid class="uri">https://arxiv.org/abs/1301.3781</biblioid>
             </biblioset>
+        </biblioentry>
+        <biblioentry role="book" xml:id="bib_MR2005">
+            <abbrev>MR2005</abbrev>
+            <authorgroup>
+                <editor><personname><firstname>Oded</firstname><surname>Maimon</surname></personname></editor>
+                <editor><personname><firstname>Lior</firstname><surname>Rokach</surname></personname></editor>
+            </authorgroup>
+            <title xml:lang="en">Data Mining and Knowledge Discovery Handbook</title>
+            <publisher>
+                <publishername>Springer Science+Business Media</publishername>
+                <address><city>New York</city></address>
+            </publisher>
+            <pubdate>2005</pubdate>
+            <pagenums>XXXVI + 1383 S.</pagenums>
+            <biblioid class="isbn">978-0-387-24435-8</biblioid>
         </biblioentry>
         <biblioentry role="contribution" xml:id="bib_NS03">
             <abbrev>NS03</abbrev>
@@ -6563,6 +6680,31 @@
                 <pubdate>2016</pubdate>
                 <volumenum>17</volumenum>
                 <pagenums>S. 1-5</pagenums>
+            </biblioset>
+        </biblioentry>
+        <biblioentry role="contribution" xml:id="bib_RSTK03">
+            <abbrev>RSTK03</abbrev>
+            <biblioset relation="part">
+                <authorgroup>
+                    <author><personname><firstname>Jason</firstname><othername>D. M.</othername><surname>Rennie</surname></personname></author>
+                    <author><personname><firstname>Lawrence</firstname><surname>Shih</surname></personname></author>
+                    <author><personname><firstname>Jaime</firstname><surname>Teevan</surname></personname></author>
+                    <author><personname><firstname>David</firstname><othername>R.</othername><surname>Karger</surname></personname></author>
+                </authorgroup>
+                <title xml:lang="en">Tackling the Poor Assumptions of Naive Bayes Text Classifiers</title>
+                <biblioset relation="book">
+                    <authorgroup>
+                        <editor><personname><firstname>Tom</firstname><surname>Fawcett</surname></personname></editor>
+                        <editor><personname><firstname>Nina</firstname><surname>Mishra</surname></personname></editor>
+                    </authorgroup>
+                    <title xml:lang="en">Proceedings of the Twentieth International Conference on Machine Learning (ICML-2003)</title>
+                    <publisher>
+                        <publishername>AAAI Press</publishername>
+                        <address><city>Palo Alto</city><state>California</state><country>USA</country></address>
+                    </publisher>
+                    <pagenums>S. 616-623</pagenums>
+                    <pubdate>2003</pubdate>
+                </biblioset>
             </biblioset>
         </biblioentry>
         <biblioentry role="monograph" xml:id="bib_SC08">
@@ -6789,6 +6931,37 @@
             <date role="cit">21.1.2018</date>
             <biblioid class="uri">http://info.vlb.de/media/wgsneuversion2_0.pdf</biblioid>
         </biblioentry>
+        <biblioentry role="contribution" xml:id="bib_YL99">
+            <abbrev>YL99</abbrev>
+            <biblioset relation="part">
+                <authorgroup>
+                    <author><personname><firstname>Yiming</firstname><surname>Yang</surname></personname></author>
+                    <author><personname><firstname>Xin</firstname><surname>Liu</surname></personname></author>
+                </authorgroup>
+                <title xml:lang="en">A Re-Examination of Text Categorization Methods</title>
+            </biblioset>
+            <biblioset relation="book">
+                <authorgroup>
+                    <editor><personname><firstname>Martin</firstname><surname>Hearst</surname></personname></editor>
+                    <editor><personname><firstname>Fredric</firstname><surname>Gey</surname></personname></editor>
+                    <editor><personname><firstname>Richard</firstname><surname>Tong</surname></personname></editor>
+                </authorgroup>
+                <title xml:lang="en">Proceedings of the 22nd annual international ACM SIGIR conference on Research and development in information retrieval (SIGIR '99)</title>
+                <confgroup>
+                    <conftitle>22nd Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</conftitle>
+                    <address><city>Berkeley</city><state>California</state><country>U.S.A.</country></address>
+                </confgroup>
+                <publisher>
+                    <publishername>Association for Computing Machinery</publishername>
+                    <address>
+                        <city>New York</city>
+                        <country>U.S.A.</country>
+                    </address>
+                </publisher>
+                <pubdate>1999</pubdate>
+                <biblioid>1-58113-096-1</biblioid>
+            </biblioset>
+        </biblioentry>
         <biblioentry role="contribution" xml:id="bib_ZVJ03">
             <abbrev>ZVJ03</abbrev>
             <biblioset relation="part">
@@ -6878,7 +7051,7 @@
             <glossentry xml:id="gt_ebook">
                 <glossterm>E-Book</glossterm>
                 <glossdef>
-                    <para><indexterm><primary>E-Book</primary></indexterm>Eine Computerdatei, die den Inhalt eines Buches enthält und mit Hilfe dazu vorgesehener Hardware (E-Book-Lesegerät) oder Software
+                    <para><indexterm><primary>E-Book</primary></indexterm>Eine Computerdatei, die den Inhalt eines Buches umfasst und mit Hilfe dazu vorgesehener Hardware (E-Book-Lesegerät) oder Software
                         (E-Book-Leseprogramm, App) angezeigt werden kann.</para>
                 </glossdef>
             </glossentry>
@@ -6909,7 +7082,7 @@
                 </glossdef>
             </glossentry>
         </glossdiv>
-        <glossdiv><!-- G -->
+        <glossdiv> <!-- G -->
             <title>G</title>
             <glossentry xml:id="gt_gui">
                 <glossterm>GUI</glossterm>
