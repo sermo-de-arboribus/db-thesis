@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generiert durch Microsoft Visio, SVG Export Abb6.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="11.6929in" height="8.26772in"
+		viewBox="0 0 841.89 595.276" xml:space="preserve" color-interpolation-filters="sRGB" class="st15">
+	<v:documentProperties v:langID="1031" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvSubprocessMaster" v:prompt="" v:val="VT4(Rectangle)"/>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {visibility:visible}
+		.st2 {fill:#5b9bd5;fill-opacity:0.22;filter:url(#filter_2);stroke:#5b9bd5;stroke-opacity:0.22}
+		.st3 {fill:#5b9bd5;stroke:#c7c8c8;stroke-width:0.25}
+		.st4 {fill:#000000;font-family:Calibri;font-size:1.16666em;font-weight:bold}
+		.st5 {font-size:1em}
+		.st6 {fill:none;filter:url(#filter_2);stroke:#5b9bd5;stroke-opacity:0.22}
+		.st7 {fill:#5b9bd5;filter:url(#filter_2);font-family:Calibri;font-size:1.33333em;font-weight:bold;opacity:0.219608}
+		.st8 {fill:none;stroke:#c7c8c8;stroke-width:0.25}
+		.st9 {fill:#000000;font-family:Calibri;font-size:1.33333em;font-weight:bold}
+		.st10 {fill:#ffffff}
+		.st11 {fill:#000000;font-family:Calibri;font-size:1.00001em;font-weight:bold}
+		.st12 {fill:#5b9bd5;fill-opacity:0.22;filter:url(#filter_2)}
+		.st13 {fill:#5b9bd5}
+		.st14 {stroke:#c7c8c8;stroke-width:0.25}
+		.st15 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Filters">
+		<filter id="filter_2">
+			<feGaussianBlur stdDeviation="2"/>
+		</filter>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Zeichenblatt-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Flussdiagramm" v:index="0"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(148.819,-449.717)">
+			<title>Chevron</title>
+			<desc>Auslesen EPUBs</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="63.7795" cy="531.496" width="127.56" height="127.559"/>
+			<g id="shadow1-2" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st2"/>
+			</g>
+			<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st3"/>
+			<text x="17.66" y="535.7" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Auslesen EPUBs</text>		</g>
+		<g id="shape3-7" v:mID="3" v:groupContext="shape" transform="translate(293.811,-449.717)">
+			<title>Chevron.3</title>
+			<desc>Textaufbereitung</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="63.7795" cy="531.496" width="127.56" height="127.559"/>
+			<g id="shadow3-8" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st2"/>
+			</g>
+			<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st3"/>
+			<text x="13.45" y="535.7" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Textaufbereitung</text>		</g>
+		<g id="shape4-13" v:mID="4" v:groupContext="shape" transform="translate(437.953,-449.717)">
+			<title>Chevron.4</title>
+			<desc>Suchindex und Tempdatei speichern</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="63.7795" cy="531.496" width="127.56" height="127.559"/>
+			<g id="shadow4-14" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st2"/>
+			</g>
+			<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st3"/>
+			<text x="21.21" y="518.9" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Suchindex und <tspan
+						x="32.46" dy="1.2em" class="st5">Tempdatei </tspan><tspan x="35.53" dy="1.2em" class="st5">speichern</tspan></text>		</g>
+		<g id="shape5-21" v:mID="5" v:groupContext="shape" transform="translate(148.819,-300.898)">
+			<title>Chevron.5</title>
+			<desc>Erstellen Wortliste aus Suchindex</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="63.7795" cy="531.496" width="127.56" height="127.559"/>
+			<g id="shadow5-22" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st2"/>
+			</g>
+			<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st3"/>
+			<text x="9.63" y="527.3" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Erstellen Wortliste<v:newlineChar/><tspan
+						x="22.47" dy="1.2em" class="st5">aus Suchindex</tspan></text>		</g>
+		<g id="shape6-28" v:mID="6" v:groupContext="shape" transform="translate(18,-456.803)">
+			<title>Quadrat</title>
+			<desc>Avve, Iteration 1</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="56.6929" cy="538.583" width="113.39" height="113.386"/>
+			<g id="shadow6-29" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="481.89" width="113.386" height="113.386" class="st6"/>
+				<text x="38.19" y="533.78" class="st7" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Avve, <v:newlineChar/><tspan
+							x="21.77" dy="1.2em" class="st5">Iteration </tspan>1</text>			</g>
+			<rect x="0" y="481.89" width="113.386" height="113.386" class="st8"/>
+			<text x="38.19" y="533.78" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Avve, <v:newlineChar/><tspan
+						x="21.77" dy="1.2em" class="st5">Iteration </tspan>1</text>		</g>
+		<g id="shape7-38" v:mID="7" v:groupContext="shape" transform="translate(18,-307.984)">
+			<title>Quadrat.7</title>
+			<desc>Avve, Iteration 2</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="56.6929" cy="538.583" width="113.39" height="113.386"/>
+			<g id="shadow7-39" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="481.89" width="113.386" height="113.386" class="st6"/>
+				<text x="38.19" y="533.78" class="st7" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Avve, <v:newlineChar/><tspan
+							x="21.77" dy="1.2em" class="st5">Iteration </tspan>2</text>			</g>
+			<rect x="0" y="481.89" width="113.386" height="113.386" class="st8"/>
+			<text x="38.19" y="533.78" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Avve, <v:newlineChar/><tspan
+						x="21.77" dy="1.2em" class="st5">Iteration </tspan>2</text>		</g>
+		<g id="group8-48" transform="translate(586.772,-478.063)" v:mID="8" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
+			</v:userDefs>
+			<title>Dokument</title>
+			<desc>Tempdateien</desc>
+			<g id="shape9-49" v:mID="9" v:groupContext="shape" v:layerMember="0">
+				<title>Tabelle.9</title>
+				<g id="shadow9-50" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M51.02 537.91 L38.34 524.41 L0 524.41 L0 595.28 L51.02 595.28 L51.02 537.91 Z" class="st2"/>
+				</g>
+				<path d="M51.02 537.91 L38.34 524.41 L0 524.41 L0 595.28 L51.02 595.28 L51.02 537.91 Z" class="st3"/>
+			</g>
+			<g id="shape10-54" v:mID="10" v:groupContext="shape" v:layerMember="0" transform="translate(9.30118,-14.2563)">
+				<title>Tabelle.10</title>
+				<v:userDefs>
+					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(1)"/>
+					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(#5b9bd5)"/>
+				</v:userDefs>
+				<path d="M19.13 595.28 L32.16 595.28 L32.16 593.48 L19.13 593.48 L19.13 595.28 ZM0 586.83 L32.16 586.83 L32.16 585.03
+							 L0 585.03 L0 586.83 ZM0 578.39 L32.16 578.39 L32.16 576.59 L0 576.59 L0 578.39 ZM0 569.95 L32.16 569.95
+							 L32.16 568.15 L0 568.15 L0 569.95 ZM0 561.5 L13.02 561.5 L13.02 559.7 L0 559.7 L0 561.5 ZM0 553.06 L13.02
+							 553.06 L13.02 551.26 L0 551.26 L0 553.06 ZM28.67 539.14 L28.67 552.2 L40.95 552.2 L28.67 539.14 Z"
+						class="st10"/>
+			</g>
+			<g id="shape8-57" v:mID="8" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="25.5118" cy="608.878" width="99.86" height="27.2039"/>
+				<g id="shadow8-58" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1"/>
+				<text x="-18.61" y="613.68" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Tempdateien</text>			</g>
+		</g>
+		<g id="shape11-60" v:mID="11" v:groupContext="shape" transform="translate(289.134,-300.898)">
+			<title>Chevron.11</title>
+			<desc>Speichern als Einzel-XRFF</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="63.7795" cy="531.496" width="127.56" height="127.559"/>
+			<g id="shadow11-61" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st2"/>
+			</g>
+			<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st3"/>
+			<text x="4.83" y="527.3" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Speichern als Einzel-<tspan
+						x="49.56" dy="1.2em" class="st5">XRFF</tspan></text>		</g>
+		<g id="shape12-67" v:mID="12" v:groupContext="shape" transform="translate(437.953,-300.898)">
+			<title>Chevron.12</title>
+			<desc>Erstellen Liste der Klassen und Speichern als Gesamt-XRFF</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="63.7795" cy="531.496" width="127.56" height="127.559"/>
+			<g id="shadow12-68" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st2"/>
+			</g>
+			<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st3"/>
+			<text x="12.06" y="510.5" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Erstellen Liste der <tspan
+						x="29.06" dy="1.2em" class="st5">Klassen und </tspan><tspan x="25.47" dy="1.2em" class="st5">Speichern als </tspan><tspan
+						x="25.06" dy="1.2em" class="st5">Gesamt</tspan>-XRFF</text>		</g>
+		<g id="group13-76" transform="translate(586.772,-329.244)" v:mID="13" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
+			</v:userDefs>
+			<title>Dokument.13</title>
+			<desc>XRFF-Datei für WEKA</desc>
+			<g id="shape14-77" v:mID="14" v:groupContext="shape" v:layerMember="0">
+				<title>Tabelle.14</title>
+				<g id="shadow14-78" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M51.02 537.91 L38.34 524.41 L0 524.41 L0 595.28 L51.02 595.28 L51.02 537.91 Z" class="st2"/>
+				</g>
+				<path d="M51.02 537.91 L38.34 524.41 L0 524.41 L0 595.28 L51.02 595.28 L51.02 537.91 Z" class="st3"/>
+			</g>
+			<g id="shape15-82" v:mID="15" v:groupContext="shape" v:layerMember="0" transform="translate(9.30118,-14.2563)">
+				<title>Tabelle.15</title>
+				<v:userDefs>
+					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(1)"/>
+					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(#5b9bd5)"/>
+				</v:userDefs>
+				<path d="M19.13 595.28 L32.16 595.28 L32.16 593.48 L19.13 593.48 L19.13 595.28 ZM0 586.83 L32.16 586.83 L32.16 585.03
+							 L0 585.03 L0 586.83 ZM0 578.39 L32.16 578.39 L32.16 576.59 L0 576.59 L0 578.39 ZM0 569.95 L32.16 569.95
+							 L32.16 568.15 L0 568.15 L0 569.95 ZM0 561.5 L13.02 561.5 L13.02 559.7 L0 559.7 L0 561.5 ZM0 553.06 L13.02
+							 553.06 L13.02 551.26 L0 551.26 L0 553.06 ZM28.67 539.14 L28.67 552.2 L40.95 552.2 L28.67 539.14 Z"
+						class="st10"/>
+			</g>
+			<g id="shape13-85" v:mID="13" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="25.5118" cy="618.478" width="127.56" height="46.4041"/>
+				<g id="shadow13-86" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1"/>
+				<text x="-22.43" y="613.68" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>XRFF-Datei für <tspan
+							x="5.14" dy="1.2em" class="st5">WEKA</tspan></text>			</g>
+		</g>
+		<g id="shape16-89" v:mID="16" v:groupContext="shape" transform="translate(18,-85.0394)">
+			<title>Quadrat.16</title>
+			<desc>WEKA- Knowledgeflow</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="56.6929" cy="538.583" width="113.39" height="113.386"/>
+			<g id="shadow16-90" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="481.89" width="113.386" height="113.386" class="st6"/>
+				<text x="33.87" y="533.78" class="st7" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>WEKA- <tspan
+							x="4.9" dy="1.2em" class="st5">Knowledgeflow</tspan></text>			</g>
+			<rect x="0" y="481.89" width="113.386" height="113.386" class="st8"/>
+			<text x="33.87" y="533.78" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>WEKA- <tspan x="4.9"
+						dy="1.2em" class="st5">Knowledgeflow</tspan></text>		</g>
+		<g id="group17-99" transform="translate(155.906,-198.425)" v:mID="17" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
+			</v:userDefs>
+			<title>Dokument.17</title>
+			<desc>XRFF-Datei Trainingsdaten mit Wortlisten</desc>
+			<g id="shape18-100" v:mID="18" v:groupContext="shape" v:layerMember="0">
+				<title>Tabelle.18</title>
+				<g id="shadow18-101" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M51.02 537.91 L38.34 524.41 L0 524.41 L0 595.28 L51.02 595.28 L51.02 537.91 Z" class="st2"/>
+				</g>
+				<path d="M51.02 537.91 L38.34 524.41 L0 524.41 L0 595.28 L51.02 595.28 L51.02 537.91 Z" class="st3"/>
+			</g>
+			<g id="shape19-105" v:mID="19" v:groupContext="shape" v:layerMember="0" transform="translate(9.30118,-14.2563)">
+				<title>Tabelle.19</title>
+				<v:userDefs>
+					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(1)"/>
+					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(#5b9bd5)"/>
+				</v:userDefs>
+				<path d="M19.13 595.28 L32.16 595.28 L32.16 593.48 L19.13 593.48 L19.13 595.28 ZM0 586.83 L32.16 586.83 L32.16 585.03
+							 L0 585.03 L0 586.83 ZM0 578.39 L32.16 578.39 L32.16 576.59 L0 576.59 L0 578.39 ZM0 569.95 L32.16 569.95
+							 L32.16 568.15 L0 568.15 L0 569.95 ZM0 561.5 L13.02 561.5 L13.02 559.7 L0 559.7 L0 561.5 ZM0 553.06 L13.02
+							 553.06 L13.02 551.26 L0 551.26 L0 553.06 ZM28.67 539.14 L28.67 552.2 L40.95 552.2 L28.67 539.14 Z"
+						class="st10"/>
+			</g>
+			<g id="shape17-108" v:mID="17" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="25.5118" cy="620.878" width="85.11" height="51.2039"/>
+				<g id="shadow17-109" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1"/>
+				<text x="-1.83" y="610.08" class="st11" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>XRFF-Datei<v:newlineChar/><tspan
+							x="-11.68" dy="1.2em" class="st5">Trainingsdaten<v:newlineChar/></tspan><tspan x="-10.82" dy="1.2em"
+							class="st5">mit Wortlisten</tspan></text>			</g>
+		</g>
+		<g id="group20-113" transform="translate(155.906,-63.7795)" v:mID="20" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
+			</v:userDefs>
+			<title>Dokument.20</title>
+			<desc>XRFF-Datei Testdaten mit Wortlisten</desc>
+			<g id="shape21-114" v:mID="21" v:groupContext="shape" v:layerMember="0">
+				<title>Tabelle.21</title>
+				<g id="shadow21-115" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M51.02 537.91 L38.34 524.41 L0 524.41 L0 595.28 L51.02 595.28 L51.02 537.91 Z" class="st2"/>
+				</g>
+				<path d="M51.02 537.91 L38.34 524.41 L0 524.41 L0 595.28 L51.02 595.28 L51.02 537.91 Z" class="st3"/>
+			</g>
+			<g id="shape22-119" v:mID="22" v:groupContext="shape" v:layerMember="0" transform="translate(9.30118,-14.2563)">
+				<title>Tabelle.22</title>
+				<v:userDefs>
+					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(1)"/>
+					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(#5b9bd5)"/>
+				</v:userDefs>
+				<path d="M19.13 595.28 L32.16 595.28 L32.16 593.48 L19.13 593.48 L19.13 595.28 ZM0 586.83 L32.16 586.83 L32.16 585.03
+							 L0 585.03 L0 586.83 ZM0 578.39 L32.16 578.39 L32.16 576.59 L0 576.59 L0 578.39 ZM0 569.95 L32.16 569.95
+							 L32.16 568.15 L0 568.15 L0 569.95 ZM0 561.5 L13.02 561.5 L13.02 559.7 L0 559.7 L0 561.5 ZM0 553.06 L13.02
+							 553.06 L13.02 551.26 L0 551.26 L0 553.06 ZM28.67 539.14 L28.67 552.2 L40.95 552.2 L28.67 539.14 Z"
+						class="st10"/>
+			</g>
+			<g id="shape20-122" v:mID="20" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="25.5118" cy="620.878" width="127.56" height="51.2039"/>
+				<g id="shadow20-123" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1"/>
+				<text x="-1.83" y="610.08" class="st11" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>XRFF-Datei<v:newlineChar/><tspan
+							x="-9.25" dy="1.2em" class="st5">Testdaten mit </tspan><tspan x="-1.03" dy="1.2em" class="st5">Wortlisten</tspan></text>			</g>
+		</g>
+		<g id="shape23-127" v:mID="23" v:groupContext="shape" transform="translate(245.197,-85.0394)">
+			<title>Chevron.23</title>
+			<desc>Gemeinsamen Wortvektor für Trainings- und Testdaten erstellen</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="63.7795" cy="531.496" width="127.56" height="127.559"/>
+			<g id="shadow23-128" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st2"/>
+			</g>
+			<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st3"/>
+			<text x="21.88" y="510.5" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Gemeinsamen <tspan
+						x="19.84" dy="1.2em" class="st5">Wortvektor für </tspan><tspan x="22.31" dy="1.2em" class="st5">Trainings</tspan>- und <tspan
+						x="7.6" dy="1.2em" class="st5">Testdaten erstellen</tspan></text>		</g>
+		<g id="group25-136" transform="translate(399.685,-198.425)" v:mID="25" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
+			</v:userDefs>
+			<title>Dokument.25</title>
+			<desc>XRFF-Datei Trainingsdaten mit Wortvektor</desc>
+			<g id="shape26-137" v:mID="26" v:groupContext="shape" v:layerMember="0">
+				<title>Tabelle.26</title>
+				<g id="shadow26-138" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M51.02 537.91 L38.34 524.41 L0 524.41 L0 595.28 L51.02 595.28 L51.02 537.91 Z" class="st2"/>
+				</g>
+				<path d="M51.02 537.91 L38.34 524.41 L0 524.41 L0 595.28 L51.02 595.28 L51.02 537.91 Z" class="st3"/>
+			</g>
+			<g id="shape27-142" v:mID="27" v:groupContext="shape" v:layerMember="0" transform="translate(9.30118,-14.2563)">
+				<title>Tabelle.27</title>
+				<v:userDefs>
+					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(1)"/>
+					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(#5b9bd5)"/>
+				</v:userDefs>
+				<path d="M19.13 595.28 L32.16 595.28 L32.16 593.48 L19.13 593.48 L19.13 595.28 ZM0 586.83 L32.16 586.83 L32.16 585.03
+							 L0 585.03 L0 586.83 ZM0 578.39 L32.16 578.39 L32.16 576.59 L0 576.59 L0 578.39 ZM0 569.95 L32.16 569.95
+							 L32.16 568.15 L0 568.15 L0 569.95 ZM0 561.5 L13.02 561.5 L13.02 559.7 L0 559.7 L0 561.5 ZM0 553.06 L13.02
+							 553.06 L13.02 551.26 L0 551.26 L0 553.06 ZM28.67 539.14 L28.67 552.2 L40.95 552.2 L28.67 539.14 Z"
+						class="st10"/>
+			</g>
+			<g id="shape25-145" v:mID="25" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="25.5118" cy="620.878" width="88.41" height="51.2039"/>
+				<g id="shadow25-146" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1"/>
+				<text x="-1.83" y="610.08" class="st11" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>XRFF-Datei<v:newlineChar/><tspan
+							x="-11.68" dy="1.2em" class="st5">Trainingsdaten<v:newlineChar/></tspan><tspan x="-13.33" dy="1.2em"
+							class="st5">mit Wortvektor</tspan></text>			</g>
+		</g>
+		<g id="group28-150" transform="translate(399.685,-63.7795)" v:mID="28" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
+			</v:userDefs>
+			<title>Dokument.28</title>
+			<desc>XRFF-Datei Testdaten mit Wortvektor</desc>
+			<g id="shape29-151" v:mID="29" v:groupContext="shape" v:layerMember="0">
+				<title>Tabelle.29</title>
+				<g id="shadow29-152" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M51.02 537.91 L38.34 524.41 L0 524.41 L0 595.28 L51.02 595.28 L51.02 537.91 Z" class="st2"/>
+				</g>
+				<path d="M51.02 537.91 L38.34 524.41 L0 524.41 L0 595.28 L51.02 595.28 L51.02 537.91 Z" class="st3"/>
+			</g>
+			<g id="shape30-156" v:mID="30" v:groupContext="shape" v:layerMember="0" transform="translate(9.30118,-14.2563)">
+				<title>Tabelle.30</title>
+				<v:userDefs>
+					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(1)"/>
+					<v:ud v:nameU="SurroundingRegionColor" v:prompt="" v:val="VT5(#5b9bd5)"/>
+				</v:userDefs>
+				<path d="M19.13 595.28 L32.16 595.28 L32.16 593.48 L19.13 593.48 L19.13 595.28 ZM0 586.83 L32.16 586.83 L32.16 585.03
+							 L0 585.03 L0 586.83 ZM0 578.39 L32.16 578.39 L32.16 576.59 L0 576.59 L0 578.39 ZM0 569.95 L32.16 569.95
+							 L32.16 568.15 L0 568.15 L0 569.95 ZM0 561.5 L13.02 561.5 L13.02 559.7 L0 559.7 L0 561.5 ZM0 553.06 L13.02
+							 553.06 L13.02 551.26 L0 551.26 L0 553.06 ZM28.67 539.14 L28.67 552.2 L40.95 552.2 L28.67 539.14 Z"
+						class="st10"/>
+			</g>
+			<g id="shape28-159" v:mID="28" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="25.5118" cy="620.878" width="127.56" height="51.2039"/>
+				<g id="shadow28-160" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1"/>
+				<text x="-1.83" y="610.08" class="st11" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>XRFF-Datei<v:newlineChar/><tspan
+							x="-9.25" dy="1.2em" class="st5">Testdaten mit </tspan><tspan x="-3.54" dy="1.2em" class="st5">Wortvektor</tspan></text>			</g>
+		</g>
+		<g id="shape31-164" v:mID="31" v:groupContext="shape" transform="translate(501.732,-85.0394)">
+			<title>Chevron.31</title>
+			<desc>Naïve-Bayes- oder SMO-Training und Evaluation ausführen</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="63.7795" cy="531.496" width="127.56" height="127.559"/>
+			<g id="shadow31-165" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st2"/>
+			</g>
+			<path d="M0 595.28 L63.78 595.28 L127.56 531.5 L63.78 467.72 L0 467.72 L63.78 531.5 L0 595.28 Z" class="st3"/>
+			<text x="10.6" y="510.5" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Na<tspan class="st5"
+						v:langID="1029">ïve</tspan><tspan class="st5" v:langID="1029">-</tspan><tspan class="st5" v:langID="1029">Bayes</tspan><tspan
+						class="st5" v:langID="1029">-</tspan><tspan class="st5" v:langID="1029"> </tspan><tspan class="st5"
+						v:langID="1029">oder </tspan><tspan x="10.94" dy="1.2em" class="st5" v:langID="1029">SMO</tspan><tspan
+						class="st5" v:langID="1029">-</tspan><tspan class="st5" v:langID="1029">Training und </tspan><tspan x="33"
+						dy="1.2em" class="st5" v:langID="1029">Evaluation<v:newlineChar/></tspan><tspan x="34.28" dy="1.2em"
+						class="st5" v:langID="1029">aus</tspan>führen</text>		</g>
+		<g id="shape32-181" v:mID="32" v:groupContext="shape" v:layerMember="0" transform="translate(646.299,-113.386)">
+			<title>Person</title>
+			<desc>Ergebnisse auswerten</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ConnGap" v:prompt="" v:val="VT0(0.00012908222537757):24"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="17.0079" cy="613.678" width="85.04" height="36.8038"/>
+			<g id="shadow32-182" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M27.48 545.88 L6.54 545.88 C5.03 545.88 3.64 546.38 2.54 547.22 C1.77 547.8 1.13 548.55 0.69 549.41 C0.25
+							 550.27 0 551.24 0 552.27 L0 576.53 L5.73 576.53 L5.73 595.28 L28.07 595.28 L28.07 576.53 L34.02 576.53
+							 L34.02 552.27 C34.02 550.79 33.5 549.43 32.64 548.35 C32.04 547.6 31.27 546.98 30.39 546.55 C29.52 546.12
+							 28.53 545.88 27.48 545.88 ZM26.79 533.86 A9.78293 9.45354 -180 1 0 7.22 533.86 A9.78293 9.45354 -180
+							 1 0 26.79 533.86 Z" class="st12"/>
+				<path d="M27.48 545.88 L6.54 545.88 C5.03 545.88 3.64 546.38 2.54 547.22 C1.77 547.8 1.13 548.55 0.69 549.41 C0.25
+							 550.27 0 551.24 0 552.27 L0 576.53 L5.73 576.53 L5.73 595.28 L28.07 595.28 L28.07 576.53 L34.02 576.53
+							 L34.02 552.27 C34.02 550.79 33.5 549.43 32.64 548.35 C32.04 547.6 31.27 546.98 30.39 546.55 C29.52 546.12
+							 28.53 545.88 27.48 545.88" class="st6"/>
+				<path d="M17.01 595.28 L17.01 580.3" class="st6"/>
+				<path d="M5.73 576.53 L5.73 563.61" class="st6"/>
+				<path d="M28.07 576.53 L28.07 563.61" class="st6"/>
+				<path d="M26.79 533.86 A9.78293 9.45354 -180 1 0 7.22 533.86 A9.78293 9.45354 -180 1 0 26.79 533.86" class="st6"/>
+			</g>
+			<path d="M27.48 545.88 L6.54 545.88 C5.03 545.88 3.64 546.38 2.54 547.22 C1.77 547.8 1.13 548.55 0.69 549.41 C0.25 550.27
+						 0 551.24 0 552.27 L0 576.53 L5.73 576.53 L5.73 595.28 L28.07 595.28 L28.07 576.53 L34.02 576.53 L34.02 552.27
+						 C34.02 550.79 33.5 549.43 32.64 548.35 C32.04 547.6 31.27 546.98 30.39 546.55 C29.52 546.12 28.53 545.88
+						 27.48 545.88 ZM26.79 533.86 A9.78293 9.45354 -180 1 0 7.22 533.86 A9.78293 9.45354 -180 1 0 26.79 533.86
+						 Z" class="st13"/>
+			<path d="M27.48 545.88 L6.54 545.88 C5.03 545.88 3.64 546.38 2.54 547.22 C1.77 547.8 1.13 548.55 0.69 549.41 C0.25 550.27
+						 0 551.24 0 552.27 L0 576.53 L5.73 576.53 L5.73 595.28 L28.07 595.28 L28.07 576.53 L34.02 576.53 L34.02 552.27
+						 C34.02 550.79 33.5 549.43 32.64 548.35 C32.04 547.6 31.27 546.98 30.39 546.55 C29.52 546.12 28.53 545.88
+						 27.48 545.88" class="st14"/>
+			<path d="M17.01 595.28 L17.01 580.3" class="st14"/>
+			<path d="M5.73 576.53 L5.73 563.61" class="st14"/>
+			<path d="M28.07 576.53 L28.07 563.61" class="st14"/>
+			<path d="M26.79 533.86 A9.78293 9.45354 -180 1 0 7.22 533.86 A9.78293 9.45354 -180 1 0 26.79 533.86" class="st14"/>
+			<text x="-9.64" y="610.08" class="st11" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Ergebnisse <tspan
+						x="-9.51" dy="1.2em" class="st5">auswerten</tspan></text>		</g>
+	</g>
+</svg>

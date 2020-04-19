@@ -1,0 +1,66 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+default namespace db = "http://docbook.org/ns/docbook"
+namespace mml = "http://www.w3.org/1998/Math/MathML"
+include "http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rnc"
+
+# allow inline MathML formulas
+db.inlineequation.content |= db._any.mml
+
+# custom avve elements
+db.domain.inlines |= db.lucene.numberOfDocuments
+db.domain.inlines |= db.lucene.numberOfTerms
+db.domain.inlines |= db.lucene.numberOfUniqueTerms
+db.domain.inlines |= db.modifiedInstancesRatio
+db.domain.inlines |= db.numberOfClasses
+db.domain.inlines |= db.numberOfTrainingInstances
+db.domain.inlines |= db.numberOfTestInstances
+db.domain.inlines |= db.numberOfInstances
+db.domain.inlines |= db.randomClassifierSuccessRate
+db.domain.inlines |= db.wordsPerSentenceMaximum
+db.domain.inlines |= db.wordsPerSentenceMean
+db.domain.inlines |= db.wordsPerSentenceMinimum
+db.all.blocks |= db.warengruppenDistribution
+db.all.blocks |= db.themaDistribution
+
+db.lucene.numberOfDocuments = element numberOfLuceneDocuments {
+    empty
+}
+db.lucene.numberOfTerms = element numberOfLuceneTerms {
+    empty
+}
+db.lucene.numberOfUniqueTerms = element numberOfUniqueLuceneTerms {
+    empty
+}
+db.modifiedInstancesRatio = element modifiedInstancesRatio {
+    empty
+}
+db.numberOfClasses = element numberOfClasses {
+    empty
+}
+db.numberOfTrainingInstances = element numberOfTrainingInstances {
+    empty
+}
+db.numberOfTestInstances = element numberOfTestInstances {
+    empty
+}
+db.numberOfInstances = element numberOfInstances {
+    empty
+}
+db.randomClassifierSuccessRate = element randomClassifierSuccessRate {
+    empty
+}
+db.wordsPerSentenceMaximum = element wordsPerSentenceMaximum {
+    empty
+}
+db.wordsPerSentenceMean = element wordsPerSentenceMean {
+    empty
+}
+db.wordsPerSentenceMinimum = element wordsPerSentenceMinimum {
+    empty
+}
+db.warengruppenDistribution = element warengruppenDistribution {
+    empty
+}
+db.themaDistribution = element themaDistribution {
+    empty
+}
